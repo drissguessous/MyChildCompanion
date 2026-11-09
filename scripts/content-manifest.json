@@ -1,0 +1,2059 @@
+{
+ "math-primaire": [
+  {
+   "id": "1AP-math-2",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "math",
+   "topic": "Les nombres jusqu’à 100"
+  },
+  {
+   "id": "1AP-math-3",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "math",
+   "topic": "Addition sans retenue"
+  },
+  {
+   "id": "1AP-math-4",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "math",
+   "topic": "Soustraction simple"
+  },
+  {
+   "id": "1AP-math-5",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "math",
+   "topic": "Formes géométriques : carré, rectangle, triangle, cercle"
+  },
+  {
+   "id": "1AP-math-6",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "math",
+   "topic": "Se repérer dans l’espace : devant, derrière, à droite, à gauche"
+  },
+  {
+   "id": "1AP-math-7",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "math",
+   "topic": "La monnaie : pièces et billets en dirhams"
+  },
+  {
+   "id": "2AP-math-2",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "math",
+   "topic": "Les nombres jusqu’à 1 000"
+  },
+  {
+   "id": "2AP-math-3",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "math",
+   "topic": "Addition avec retenue"
+  },
+  {
+   "id": "2AP-math-4",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "math",
+   "topic": "Initiation à la multiplication"
+  },
+  {
+   "id": "2AP-math-5",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "math",
+   "topic": "Mesurer des longueurs : le mètre et le centimètre"
+  },
+  {
+   "id": "2AP-math-6",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "math",
+   "topic": "Lire l’heure"
+  },
+  {
+   "id": "2AP-math-7",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "math",
+   "topic": "Les droites et les segments"
+  },
+  {
+   "id": "3AP-math-2",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "math",
+   "topic": "Les nombres jusqu’à 10 000"
+  },
+  {
+   "id": "3AP-math-3",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "math",
+   "topic": "La division : partage et groupement"
+  },
+  {
+   "id": "3AP-math-4",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "math",
+   "topic": "Les angles droits"
+  },
+  {
+   "id": "3AP-math-5",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "math",
+   "topic": "Périmètre du carré et du rectangle"
+  },
+  {
+   "id": "3AP-math-6",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "math",
+   "topic": "Les masses : le kilogramme et le gramme"
+  },
+  {
+   "id": "4AP-math-2",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "math",
+   "topic": "Les grands nombres jusqu’à 999 999"
+  },
+  {
+   "id": "4AP-math-3",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "math",
+   "topic": "La multiplication posée"
+  },
+  {
+   "id": "4AP-math-4",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "math",
+   "topic": "La division euclidienne"
+  },
+  {
+   "id": "4AP-math-5",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "math",
+   "topic": "Aire du carré et du rectangle"
+  },
+  {
+   "id": "4AP-math-6",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "math",
+   "topic": "Les droites parallèles et perpendiculaires"
+  },
+  {
+   "id": "5AP-math-2",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "math",
+   "topic": "Addition et soustraction des décimaux"
+  },
+  {
+   "id": "5AP-math-3",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "math",
+   "topic": "Fractions et nombres décimaux"
+  },
+  {
+   "id": "5AP-math-4",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "math",
+   "topic": "Le cercle et le disque"
+  },
+  {
+   "id": "5AP-math-5",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "math",
+   "topic": "Les volumes : le cube et le pavé droit"
+  },
+  {
+   "id": "5AP-math-6",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "math",
+   "topic": "Les durées"
+  },
+  {
+   "id": "6AP-math-2",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "math",
+   "topic": "Multiplication et division des décimaux"
+  },
+  {
+   "id": "6AP-math-3",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "math",
+   "topic": "Les échelles"
+  },
+  {
+   "id": "6AP-math-4",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "math",
+   "topic": "Aire du triangle et du disque"
+  },
+  {
+   "id": "6AP-math-5",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "math",
+   "topic": "La vitesse moyenne"
+  },
+  {
+   "id": "6AP-math-6",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "math",
+   "topic": "Préparer l’examen provincial"
+  }
+ ],
+ "francais-primaire": [
+  {
+   "id": "1AP-francais-2",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "francais",
+   "topic": "Les consonnes : m, l, r, s, p, t"
+  },
+  {
+   "id": "1AP-francais-3",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "francais",
+   "topic": "Lire des mots simples"
+  },
+  {
+   "id": "1AP-francais-4",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "francais",
+   "topic": "Se présenter : je m’appelle…"
+  },
+  {
+   "id": "1AP-francais-5",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "francais",
+   "topic": "La famille et la maison (vocabulaire)"
+  },
+  {
+   "id": "2AP-francais-2",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "francais",
+   "topic": "Le masculin et le féminin"
+  },
+  {
+   "id": "2AP-francais-3",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "francais",
+   "topic": "Le singulier et le pluriel"
+  },
+  {
+   "id": "2AP-francais-4",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "francais",
+   "topic": "Les sons ou, on, an, in"
+  },
+  {
+   "id": "2AP-francais-5",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "francais",
+   "topic": "Lire et comprendre une petite histoire"
+  },
+  {
+   "id": "3AP-francais-2",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "francais",
+   "topic": "Le sujet et le verbe"
+  },
+  {
+   "id": "3AP-francais-3",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "francais",
+   "topic": "Les adjectifs qualificatifs"
+  },
+  {
+   "id": "3AP-francais-4",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "francais",
+   "topic": "La ponctuation"
+  },
+  {
+   "id": "3AP-francais-5",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "francais",
+   "topic": "Écrire une carte d’invitation"
+  },
+  {
+   "id": "4AP-francais-2",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "francais",
+   "topic": "Le futur simple"
+  },
+  {
+   "id": "4AP-francais-3",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "francais",
+   "topic": "Le complément d’objet direct"
+  },
+  {
+   "id": "4AP-francais-4",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "francais",
+   "topic": "Les homophones a / à, et / est"
+  },
+  {
+   "id": "4AP-francais-5",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "francais",
+   "topic": "Écrire un récit court"
+  },
+  {
+   "id": "5AP-francais-2",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "francais",
+   "topic": "Le complément circonstanciel"
+  },
+  {
+   "id": "5AP-francais-3",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "francais",
+   "topic": "Les pronoms personnels"
+  },
+  {
+   "id": "5AP-francais-4",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "francais",
+   "topic": "L’accord du participe passé avec être"
+  },
+  {
+   "id": "5AP-francais-5",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "francais",
+   "topic": "Écrire une lettre"
+  },
+  {
+   "id": "6AP-francais-2",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "francais",
+   "topic": "Le passé simple"
+  },
+  {
+   "id": "6AP-francais-3",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "francais",
+   "topic": "La phrase complexe : les propositions"
+  },
+  {
+   "id": "6AP-francais-4",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "francais",
+   "topic": "Le discours direct"
+  },
+  {
+   "id": "6AP-francais-5",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "francais",
+   "topic": "Production écrite : décrire un lieu"
+  }
+ ],
+ "arabe": [
+  {
+   "id": "1AP-arabe-2",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "arabe",
+   "topic": "الحركات: الفتحة والضمة والكسرة"
+  },
+  {
+   "id": "1AP-arabe-3",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "arabe",
+   "topic": "المدود"
+  },
+  {
+   "id": "1AP-arabe-4",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "arabe",
+   "topic": "التعبير الشفهي: أنا وأسرتي"
+  },
+  {
+   "id": "2AP-arabe-2",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "arabe",
+   "topic": "الشدة"
+  },
+  {
+   "id": "2AP-arabe-3",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "arabe",
+   "topic": "أسماء الإشارة"
+  },
+  {
+   "id": "2AP-arabe-4",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "arabe",
+   "topic": "قراءة نص قصير وفهمه"
+  },
+  {
+   "id": "3AP-arabe-1",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "arabe",
+   "topic": "الفعل الماضي والمضارع والأمر"
+  },
+  {
+   "id": "3AP-arabe-2",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "arabe",
+   "topic": "الضمائر المنفصلة"
+  },
+  {
+   "id": "3AP-arabe-3",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "arabe",
+   "topic": "التاء المربوطة والمبسوطة"
+  },
+  {
+   "id": "4AP-arabe-2",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "arabe",
+   "topic": "الجملة الفعلية"
+  },
+  {
+   "id": "4AP-arabe-3",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "arabe",
+   "topic": "المفعول به"
+  },
+  {
+   "id": "4AP-arabe-4",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "arabe",
+   "topic": "علامات الترقيم"
+  },
+  {
+   "id": "5AP-arabe-1",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "arabe",
+   "topic": "كان وأخواتها"
+  },
+  {
+   "id": "5AP-arabe-2",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "arabe",
+   "topic": "إن وأخواتها"
+  },
+  {
+   "id": "5AP-arabe-3",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "arabe",
+   "topic": "الحال"
+  },
+  {
+   "id": "5AP-arabe-4",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "arabe",
+   "topic": "كتابة رسالة"
+  },
+  {
+   "id": "6AP-arabe-2",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "arabe",
+   "topic": "العدد والمعدود"
+  },
+  {
+   "id": "6AP-arabe-3",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "arabe",
+   "topic": "الإنتاج الكتابي: الوصف"
+  },
+  {
+   "id": "1AC-arabe-1",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "arabe",
+   "topic": "النعت"
+  },
+  {
+   "id": "1AC-arabe-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "arabe",
+   "topic": "الإضافة"
+  },
+  {
+   "id": "1AC-arabe-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "arabe",
+   "topic": "الأسلوب الخبري والإنشائي"
+  },
+  {
+   "id": "2AC-arabe-1",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "arabe",
+   "topic": "الفاعل ونائب الفاعل"
+  },
+  {
+   "id": "2AC-arabe-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "arabe",
+   "topic": "المبتدأ والخبر"
+  },
+  {
+   "id": "2AC-arabe-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "arabe",
+   "topic": "الخطاطة السردية"
+  },
+  {
+   "id": "3AC-arabe-1",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "arabe",
+   "topic": "النص الحجاجي"
+  },
+  {
+   "id": "3AC-arabe-2",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "arabe",
+   "topic": "المفعول لأجله"
+  },
+  {
+   "id": "3AC-arabe-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "arabe",
+   "topic": "أسلوب الشرط"
+  },
+  {
+   "id": "TC-arabe-1",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "arabe",
+   "topic": "النص الشعري"
+  },
+  {
+   "id": "TC-arabe-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "arabe",
+   "topic": "المقالة"
+  },
+  {
+   "id": "TC-arabe-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "arabe",
+   "topic": "مهارة التلخيص"
+  },
+  {
+   "id": "1BAC-arabe-1",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "arabe",
+   "topic": "القصة القصيرة"
+  },
+  {
+   "id": "1BAC-arabe-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "arabe",
+   "topic": "المسرح"
+  },
+  {
+   "id": "1BAC-arabe-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "arabe",
+   "topic": "مهارة التحليل"
+  },
+  {
+   "id": "2BAC-arabe-1",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "arabe",
+   "topic": "النص الشعري الحديث"
+  },
+  {
+   "id": "2BAC-arabe-2",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "arabe",
+   "topic": "مهارة المقارنة"
+  }
+ ],
+ "hg-eveil": [
+  {
+   "id": "1AP-eveil-2",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "eveil",
+   "topic": "Les animaux autour de moi"
+  },
+  {
+   "id": "1AP-eveil-3",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "eveil",
+   "topic": "L’hygiène au quotidien"
+  },
+  {
+   "id": "2AP-eveil-1",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "eveil",
+   "topic": "Les plantes : besoins et croissance"
+  },
+  {
+   "id": "2AP-eveil-2",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "eveil",
+   "topic": "Les saisons"
+  },
+  {
+   "id": "2AP-eveil-3",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "eveil",
+   "topic": "Les aliments et la santé"
+  },
+  {
+   "id": "3AP-eveil-2",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "eveil",
+   "topic": "Les sources de lumière"
+  },
+  {
+   "id": "3AP-eveil-3",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "eveil",
+   "topic": "Le squelette et les muscles"
+  },
+  {
+   "id": "3AP-hg-1",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "hg",
+   "topic": "Se repérer sur un plan"
+  },
+  {
+   "id": "3AP-hg-2",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "hg",
+   "topic": "Ma commune et ma région"
+  },
+  {
+   "id": "3AP-hg-3",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "hg",
+   "topic": "La famille et les générations"
+  },
+  {
+   "id": "4AP-eveil-1",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "eveil",
+   "topic": "La digestion"
+  },
+  {
+   "id": "4AP-eveil-2",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "eveil",
+   "topic": "Le circuit électrique simple"
+  },
+  {
+   "id": "4AP-eveil-3",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "eveil",
+   "topic": "Les mélanges"
+  },
+  {
+   "id": "4AP-hg-2",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "hg",
+   "topic": "Les Idrissides"
+  },
+  {
+   "id": "4AP-hg-3",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "hg",
+   "topic": "Droits et devoirs de l’enfant"
+  },
+  {
+   "id": "5AP-eveil-2",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "eveil",
+   "topic": "La circulation sanguine"
+  },
+  {
+   "id": "5AP-eveil-3",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "eveil",
+   "topic": "L’air et ses propriétés"
+  },
+  {
+   "id": "5AP-hg-1",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "hg",
+   "topic": "Les Almoravides et les Almohades"
+  },
+  {
+   "id": "5AP-hg-2",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "hg",
+   "topic": "Les ressources naturelles du Maroc"
+  },
+  {
+   "id": "5AP-hg-3",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "hg",
+   "topic": "La citoyenneté"
+  },
+  {
+   "id": "6AP-eveil-2",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "eveil",
+   "topic": "La reproduction des plantes"
+  },
+  {
+   "id": "6AP-eveil-3",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "eveil",
+   "topic": "L’électricité et la sécurité"
+  },
+  {
+   "id": "6AP-hg-1",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "hg",
+   "topic": "Les Saadiens et les Alaouites"
+  },
+  {
+   "id": "6AP-hg-2",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "hg",
+   "topic": "Le Maroc indépendant"
+  },
+  {
+   "id": "6AP-hg-3",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "hg",
+   "topic": "Le développement durable"
+  },
+  {
+   "id": "1AC-hg-1",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "hg",
+   "topic": "Introduction à l’histoire : sources et repères"
+  },
+  {
+   "id": "1AC-hg-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "hg",
+   "topic": "Les grandes civilisations antiques"
+  },
+  {
+   "id": "1AC-hg-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "hg",
+   "topic": "Les cartes et l’échelle"
+  },
+  {
+   "id": "2AC-hg-1",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "hg",
+   "topic": "Le Maroc au Moyen Âge"
+  },
+  {
+   "id": "2AC-hg-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "hg",
+   "topic": "La population mondiale"
+  },
+  {
+   "id": "2AC-hg-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "hg",
+   "topic": "Les grandes découvertes"
+  },
+  {
+   "id": "3AC-hg-1",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "hg",
+   "topic": "La colonisation et la résistance"
+  },
+  {
+   "id": "3AC-hg-2",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "hg",
+   "topic": "L’indépendance du Maroc"
+  },
+  {
+   "id": "3AC-hg-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "hg",
+   "topic": "La mondialisation"
+  }
+ ],
+ "islamique-primaire": [
+  {
+   "id": "1AP-islamique-1",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "1AP-islamique-2",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "1AP-islamique-3",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "1AP-islamique-4",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "1AP-islamique-5",
+   "levelId": "1AP",
+   "levelLabel": "1re année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "2AP-islamique-1",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "2AP-islamique-2",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "2AP-islamique-3",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "2AP-islamique-4",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "2AP-islamique-5",
+   "levelId": "2AP",
+   "levelLabel": "2e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "3AP-islamique-1",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "3AP-islamique-2",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "3AP-islamique-3",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "3AP-islamique-4",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "3AP-islamique-5",
+   "levelId": "3AP",
+   "levelLabel": "3e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "4AP-islamique-1",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "4AP-islamique-2",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "4AP-islamique-3",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "4AP-islamique-4",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "4AP-islamique-5",
+   "levelId": "4AP",
+   "levelLabel": "4e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "5AP-islamique-1",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "5AP-islamique-2",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "5AP-islamique-3",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "5AP-islamique-4",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "5AP-islamique-5",
+   "levelId": "5AP",
+   "levelLabel": "5e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "6AP-islamique-1",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "6AP-islamique-2",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "6AP-islamique-3",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "6AP-islamique-4",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "6AP-islamique-5",
+   "levelId": "6AP",
+   "levelLabel": "6e année primaire",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  }
+ ],
+ "francais-secondaire": [
+  {
+   "id": "1AC-francais-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "francais",
+   "topic": "Les classes grammaticales"
+  },
+  {
+   "id": "1AC-francais-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "francais",
+   "topic": "Les temps du récit"
+  },
+  {
+   "id": "1AC-francais-4",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "francais",
+   "topic": "Le portrait"
+  },
+  {
+   "id": "1AC-francais-5",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "francais",
+   "topic": "Production écrite : écrire un conte"
+  },
+  {
+   "id": "2AC-francais-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "francais",
+   "topic": "La nouvelle réaliste"
+  },
+  {
+   "id": "2AC-francais-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "francais",
+   "topic": "Les figures de style"
+  },
+  {
+   "id": "2AC-francais-4",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "francais",
+   "topic": "La lettre et le texte injonctif"
+  },
+  {
+   "id": "3AC-francais-2",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "francais",
+   "topic": "Le théâtre"
+  },
+  {
+   "id": "3AC-francais-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "francais",
+   "topic": "L’expression de la cause et de la conséquence"
+  },
+  {
+   "id": "3AC-francais-4",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "francais",
+   "topic": "Préparer l’examen régional"
+  },
+  {
+   "id": "TC-francais-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "francais",
+   "topic": "La nouvelle"
+  },
+  {
+   "id": "TC-francais-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "francais",
+   "topic": "Le résumé de texte"
+  },
+  {
+   "id": "TC-francais-4",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "francais",
+   "topic": "L’argumentation"
+  },
+  {
+   "id": "1BAC-francais-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "francais",
+   "topic": "La tragédie"
+  },
+  {
+   "id": "1BAC-francais-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "francais",
+   "topic": "Le roman à thèse"
+  },
+  {
+   "id": "1BAC-francais-4",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "francais",
+   "topic": "Le récit de vie"
+  },
+  {
+   "id": "2BAC-francais-1",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "francais",
+   "topic": "L’argumentation"
+  },
+  {
+   "id": "2BAC-francais-2",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "francais",
+   "topic": "La production écrite"
+  },
+  {
+   "id": "2BAC-francais-3",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "francais",
+   "topic": "Préparer l’oral"
+  }
+ ],
+ "anglais-philo": [
+  {
+   "id": "1AC-anglais-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "anglais",
+   "topic": "Greetings and introductions"
+  },
+  {
+   "id": "1AC-anglais-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "anglais",
+   "topic": "Family and daily routine"
+  },
+  {
+   "id": "2AC-anglais-1",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "anglais",
+   "topic": "Simple past"
+  },
+  {
+   "id": "2AC-anglais-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "anglais",
+   "topic": "Food and health"
+  },
+  {
+   "id": "2AC-anglais-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "anglais",
+   "topic": "Describing places"
+  },
+  {
+   "id": "3AC-anglais-2",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "anglais",
+   "topic": "Environment"
+  },
+  {
+   "id": "3AC-anglais-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "anglais",
+   "topic": "Writing an email"
+  },
+  {
+   "id": "TC-anglais-1",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "anglais",
+   "topic": "Education"
+  },
+  {
+   "id": "TC-anglais-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "anglais",
+   "topic": "Future forms"
+  },
+  {
+   "id": "TC-anglais-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "anglais",
+   "topic": "Writing a paragraph"
+  },
+  {
+   "id": "TC-philo-1",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "philo",
+   "topic": "La naissance de la philosophie"
+  },
+  {
+   "id": "TC-philo-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "philo",
+   "topic": "Qu’est-ce que la philosophie ?"
+  },
+  {
+   "id": "TC-philo-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "philo",
+   "topic": "L’utilité de la philosophie"
+  },
+  {
+   "id": "1BAC-anglais-1",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "anglais",
+   "topic": "Cultural values"
+  },
+  {
+   "id": "1BAC-anglais-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "anglais",
+   "topic": "Conditionals"
+  },
+  {
+   "id": "1BAC-anglais-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "anglais",
+   "topic": "Writing an argumentative essay"
+  },
+  {
+   "id": "1BAC-philo-1",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "philo",
+   "topic": "Nature et culture"
+  },
+  {
+   "id": "1BAC-philo-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "philo",
+   "topic": "Le travail et la technique"
+  },
+  {
+   "id": "1BAC-philo-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "philo",
+   "topic": "Le langage"
+  },
+  {
+   "id": "2BAC-anglais-1",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "anglais",
+   "topic": "Women and power"
+  },
+  {
+   "id": "2BAC-anglais-2",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "anglais",
+   "topic": "Reported speech"
+  },
+  {
+   "id": "2BAC-anglais-3",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "anglais",
+   "topic": "Writing an opinion essay"
+  },
+  {
+   "id": "2BAC-philo-1",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "philo",
+   "topic": "La personne et autrui"
+  },
+  {
+   "id": "2BAC-philo-2",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "philo",
+   "topic": "La connaissance : théorie et vérité"
+  },
+  {
+   "id": "2BAC-philo-3",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "philo",
+   "topic": "La politique : l’État et le droit"
+  },
+  {
+   "id": "2BAC-philo-4",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "philo",
+   "topic": "La morale : le devoir et le bonheur"
+  }
+ ],
+ "sciences": [
+  {
+   "id": "1AC-svt-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "svt",
+   "topic": "La respiration chez les êtres vivants"
+  },
+  {
+   "id": "1AC-svt-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "svt",
+   "topic": "Les roches et le sol"
+  },
+  {
+   "id": "1AC-pc-1",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "pc",
+   "topic": "La matière et ses états"
+  },
+  {
+   "id": "1AC-pc-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "pc",
+   "topic": "La masse volumique"
+  },
+  {
+   "id": "1AC-pc-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "pc",
+   "topic": "Le circuit électrique simple"
+  },
+  {
+   "id": "2AC-svt-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "svt",
+   "topic": "La respiration et la circulation"
+  },
+  {
+   "id": "2AC-svt-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "svt",
+   "topic": "La reproduction des plantes"
+  },
+  {
+   "id": "2AC-pc-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "pc",
+   "topic": "L’intensité du courant"
+  },
+  {
+   "id": "2AC-pc-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "pc",
+   "topic": "La combustion"
+  },
+  {
+   "id": "3AC-svt-2",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "svt",
+   "topic": "Le système nerveux"
+  },
+  {
+   "id": "3AC-svt-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "svt",
+   "topic": "La génétique (initiation)"
+  },
+  {
+   "id": "3AC-pc-2",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "pc",
+   "topic": "Le poids et la masse"
+  },
+  {
+   "id": "3AC-pc-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "pc",
+   "topic": "Les ions et le pH"
+  },
+  {
+   "id": "TC-svt-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "svt",
+   "topic": "Les techniques d’étude d’un milieu naturel"
+  },
+  {
+   "id": "TC-svt-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "svt",
+   "topic": "Les relations alimentaires"
+  },
+  {
+   "id": "TC-pc-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "pc",
+   "topic": "Les actions mécaniques"
+  },
+  {
+   "id": "TC-pc-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "pc",
+   "topic": "L’atome et le tableau périodique"
+  },
+  {
+   "id": "1BAC-svt-1",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "svt",
+   "topic": "La production de la matière organique"
+  },
+  {
+   "id": "1BAC-svt-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "svt",
+   "topic": "Le sol"
+  },
+  {
+   "id": "1BAC-svt-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "svt",
+   "topic": "La géologie : formation des chaînes de montagnes"
+  },
+  {
+   "id": "1BAC-pc-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "pc",
+   "topic": "L’énergie potentielle de pesanteur"
+  },
+  {
+   "id": "1BAC-pc-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "pc",
+   "topic": "Les réactions d’oxydoréduction"
+  },
+  {
+   "id": "2BAC-svt-2",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "svt",
+   "topic": "L’information génétique"
+  },
+  {
+   "id": "2BAC-svt-3",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "svt",
+   "topic": "La génétique humaine"
+  },
+  {
+   "id": "2BAC-svt-4",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "svt",
+   "topic": "L’immunologie"
+  },
+  {
+   "id": "2BAC-pc-2",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "pc",
+   "topic": "Les ondes mécaniques progressives"
+  },
+  {
+   "id": "2BAC-pc-3",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "pc",
+   "topic": "Le dipôle RC"
+  },
+  {
+   "id": "2BAC-pc-4",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "pc",
+   "topic": "Les lois de Newton"
+  },
+  {
+   "id": "2BAC-pc-5",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "pc",
+   "topic": "Les transformations chimiques lentes et rapides"
+  }
+ ],
+ "islamique-secondaire": [
+  {
+   "id": "1AC-islamique-1",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "1AC-islamique-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "1AC-islamique-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "1AC-islamique-4",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "1AC-islamique-5",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "2AC-islamique-1",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "2AC-islamique-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "2AC-islamique-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "2AC-islamique-4",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "2AC-islamique-5",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "3AC-islamique-1",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "3AC-islamique-2",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "3AC-islamique-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "3AC-islamique-4",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "3AC-islamique-5",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "TC-islamique-1",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "TC-islamique-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "TC-islamique-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "TC-islamique-4",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "TC-islamique-5",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "1BAC-islamique-1",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "1BAC-islamique-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "1BAC-islamique-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "1BAC-islamique-4",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "1BAC-islamique-5",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  },
+  {
+   "id": "2BAC-islamique-1",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "islamique",
+   "topic": "مدخل التزكية (القرآن الكريم)"
+  },
+  {
+   "id": "2BAC-islamique-2",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "islamique",
+   "topic": "مدخل الاقتداء (السيرة النبوية)"
+  },
+  {
+   "id": "2BAC-islamique-3",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "islamique",
+   "topic": "مدخل الاستجابة (العبادات)"
+  },
+  {
+   "id": "2BAC-islamique-4",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "islamique",
+   "topic": "مدخل القسط (الحقوق والواجبات)"
+  },
+  {
+   "id": "2BAC-islamique-5",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "islamique",
+   "topic": "مدخل الحكمة (الأخلاق والقيم)"
+  }
+ ],
+ "math-secondaire": [
+  {
+   "id": "1AC-math-2",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "math",
+   "topic": "Opérations sur les nombres décimaux"
+  },
+  {
+   "id": "1AC-math-3",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "math",
+   "topic": "Les fractions : opérations"
+  },
+  {
+   "id": "1AC-math-4",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "math",
+   "topic": "Les puissances"
+  },
+  {
+   "id": "1AC-math-5",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "math",
+   "topic": "Le développement et la factorisation (initiation)"
+  },
+  {
+   "id": "1AC-math-6",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "math",
+   "topic": "La symétrie axiale et centrale"
+  },
+  {
+   "id": "1AC-math-7",
+   "levelId": "1AC",
+   "levelLabel": "1re année collège",
+   "subjectId": "math",
+   "topic": "Les triangles et les droites remarquables"
+  },
+  {
+   "id": "2AC-math-2",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "math",
+   "topic": "Le calcul littéral"
+  },
+  {
+   "id": "2AC-math-3",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "math",
+   "topic": "Les équations (initiation)"
+  },
+  {
+   "id": "2AC-math-4",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "math",
+   "topic": "Les puissances de 10 et l’écriture scientifique"
+  },
+  {
+   "id": "2AC-math-5",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "math",
+   "topic": "La proportionnalité et les pourcentages"
+  },
+  {
+   "id": "2AC-math-6",
+   "levelId": "2AC",
+   "levelLabel": "2e année collège",
+   "subjectId": "math",
+   "topic": "Les statistiques : moyenne et effectifs"
+  },
+  {
+   "id": "3AC-math-3",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "math",
+   "topic": "Les identités remarquables"
+  },
+  {
+   "id": "3AC-math-4",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "math",
+   "topic": "Les systèmes de deux équations"
+  },
+  {
+   "id": "3AC-math-5",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "math",
+   "topic": "Les fonctions linéaires et affines"
+  },
+  {
+   "id": "3AC-math-6",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "math",
+   "topic": "La trigonométrie dans le triangle rectangle"
+  },
+  {
+   "id": "3AC-math-7",
+   "levelId": "3AC",
+   "levelLabel": "3e année collège",
+   "subjectId": "math",
+   "topic": "Les statistiques"
+  },
+  {
+   "id": "TC-math-2",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "math",
+   "topic": "Les ensembles de nombres"
+  },
+  {
+   "id": "TC-math-3",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "math",
+   "topic": "L’ordre et les intervalles"
+  },
+  {
+   "id": "TC-math-4",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "math",
+   "topic": "Les polynômes"
+  },
+  {
+   "id": "TC-math-5",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "math",
+   "topic": "Les vecteurs et la translation"
+  },
+  {
+   "id": "TC-math-6",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "math",
+   "topic": "La droite dans le plan"
+  },
+  {
+   "id": "TC-math-7",
+   "levelId": "TC",
+   "levelLabel": "Tronc commun scientifique",
+   "subjectId": "math",
+   "topic": "Les généralités sur les fonctions"
+  },
+  {
+   "id": "1BAC-math-2",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "math",
+   "topic": "La logique et le raisonnement"
+  },
+  {
+   "id": "1BAC-math-3",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "math",
+   "topic": "Les fonctions : limites et dérivation"
+  },
+  {
+   "id": "1BAC-math-4",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "math",
+   "topic": "Le barycentre"
+  },
+  {
+   "id": "1BAC-math-5",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "math",
+   "topic": "Le produit scalaire"
+  },
+  {
+   "id": "1BAC-math-6",
+   "levelId": "1BAC",
+   "levelLabel": "1re année bac (Sciences expérimentales)",
+   "subjectId": "math",
+   "topic": "La trigonométrie"
+  },
+  {
+   "id": "2BAC-math-3",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "math",
+   "topic": "Limites et continuité"
+  },
+  {
+   "id": "2BAC-math-4",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "math",
+   "topic": "La dérivation et l’étude de fonctions"
+  },
+  {
+   "id": "2BAC-math-5",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "math",
+   "topic": "La fonction logarithme népérien"
+  },
+  {
+   "id": "2BAC-math-6",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "math",
+   "topic": "Le calcul intégral"
+  },
+  {
+   "id": "2BAC-math-7",
+   "levelId": "2BAC",
+   "levelLabel": "2e année bac (Sciences PC / SVT)",
+   "subjectId": "math",
+   "topic": "Le dénombrement et les probabilités"
+  }
+ ]
+}

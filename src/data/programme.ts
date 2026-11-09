@@ -4,6 +4,7 @@
  * Un thème relié à `chapterId` a un cours rédigé dans l'app ; les autres
  * apparaissent dans la recherche avec la mention « bientôt ».
  */
+import { TOPIC_LINKS } from './content/links';
 import type { SubjectId } from './types';
 
 export interface Topic {
@@ -23,7 +24,7 @@ const ISLAMIQUE: Topic[] = [
   t('مدخل الحكمة (الأخلاق والقيم)'),
 ];
 
-export const PROGRAMME: Programme = {
+const PROGRAMME_BASE: Programme = {
   '1AP': {
     math: [
       t('Les nombres de 0 à 20', '1AP-math-1'),
@@ -299,6 +300,19 @@ export const PROGRAMME: Programme = {
     islamique: ISLAMIQUE,
   },
 };
+
+/** Programme avec liens vers les cours (copie par niveau : les thèmes partagés ne se mélangent pas). */
+export const PROGRAMME: Programme = Object.fromEntries(
+  Object.entries(PROGRAMME_BASE).map(([lvl, subs]) => [
+    lvl,
+    Object.fromEntries(
+      Object.entries(subs).map(([sub, topics]) => [
+        sub,
+        (topics ?? []).map((tp) => ({ ...tp, chapterId: tp.chapterId ?? TOPIC_LINKS[`${lvl}|${sub}|${tp.title}`] })),
+      ]),
+    ),
+  ]),
+) as Programme;
 
 export function topicsFor(levelId: string, subjectId: SubjectId): Topic[] {
   return PROGRAMME[levelId]?.[subjectId] ?? [];
