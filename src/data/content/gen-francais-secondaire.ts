@@ -123,7 +123,7 @@ export const GEN_FRANCAIS_SECONDAIRE: Chapter[] = [
       { type: 'h', text: 'Narrateur et point de vue' },
       { type: 'list', items: ['Point de vue omniscient : le narrateur sait tout, même les pensées de tous les personnages.', 'Point de vue interne : on voit l’histoire à travers les yeux d’un personnage.', 'Point de vue externe : le narrateur décrit de l’extérieur, comme une caméra, sans entrer dans les pensées.'] },
       { type: 'rule', text: 'Nouvelle réaliste = récit court + personnages et lieux vraisemblables + événement du quotidien + chute souvent surprenante. Le but est de donner l’illusion du réel et souvent de faire réfléchir sur la société.' },
-      { type: 'example', text: 'Résumé inventé : un employé de Casablanca économise pendant des mois pour offrir une montre à son père. Le jour de la fête, il découvre que son père a vendu sa vieille radio pour lui acheter… un bracelet pour sa montre, qu’il n’a plus. La chute crée l’émotion et la surprise.' },
+      { type: 'example', text: 'Résumé inventé : à Casablanca, un jeune employé vend sa montre pour offrir à son père un étui à lunettes en cuir. Le même soir, son père lui offre… un bracelet neuf pour cette montre qu’il n’a plus. La chute crée à la fois la surprise et l’émotion.' },
       { type: 'tip', text: 'Pour repérer la chute, relis le dernier paragraphe et demande-toi : « Est-ce que je m’y attendais ? » C’est souvent là que se cache le sens de la nouvelle.' },
     ],
     exercises: [

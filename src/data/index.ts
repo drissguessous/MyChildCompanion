@@ -1,4 +1,5 @@
 import { COLLEGE_CHAPTERS } from './content/college';
+import { GEN_FRANCAIS_SECONDAIRE } from './content/gen-francais-secondaire';
 import { GEN_MATH_PRIMAIRE } from './content/gen-math-primaire';
 import { EXTRA_CHAPTERS } from './content/extra';
 import { LYCEE_CHAPTERS } from './content/lycee';
@@ -8,7 +9,7 @@ import { EXAMS } from './exams';
 import { PROGRAMME } from './programme';
 import type { Chapter, Exam, SubjectId } from './types';
 
-export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_MATH_PRIMAIRE];
+export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_FRANCAIS_SECONDAIRE, ...GEN_MATH_PRIMAIRE];
 
 export const getChapter = (id: string) => CHAPTERS.find((c) => c.id === id);
 export const getExam = (id: string) => EXAMS.find((e) => e.id === id);
