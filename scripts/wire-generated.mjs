@@ -3,7 +3,9 @@ import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 const root = new URL('..', import.meta.url).pathname;
 const dir = join(root, 'src/data/content');
-const files = readdirSync(dir).filter((f) => /^gen-.*\.ts$/.test(f)).sort();
+// Seuls les lots validés et terminés (scripts/content-done.json) sont raccordés.
+const done = new Set(JSON.parse(readFileSync(join(root, 'scripts/content-done.json'), 'utf8')));
+const files = readdirSync(dir).filter((f) => /^gen-.*\.ts$/.test(f) && done.has(f.replace(/^gen-|\.ts$/g, ''))).sort();
 const manifest = JSON.parse(readFileSync(join(root, 'scripts/content-manifest.json'), 'utf8'));
 const present = new Set();
 const exportsList = [];

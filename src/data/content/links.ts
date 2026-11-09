@@ -1,2 +1,35 @@
-/** Liens thème → cours (généré depuis scripts/content-manifest.json). */
-export const TOPIC_LINKS: Record<string, string> = {};
+/** Liens thème → cours (généré par scripts/wire-generated.mjs). */
+export const TOPIC_LINKS: Record<string, string> = {
+  "1AP|math|Les nombres jusqu’à 100": "1AP-math-2",
+  "1AP|math|Addition sans retenue": "1AP-math-3",
+  "1AP|math|Soustraction simple": "1AP-math-4",
+  "1AP|math|Formes géométriques : carré, rectangle, triangle, cercle": "1AP-math-5",
+  "1AP|math|Se repérer dans l’espace : devant, derrière, à droite, à gauche": "1AP-math-6",
+  "1AP|math|La monnaie : pièces et billets en dirhams": "1AP-math-7",
+  "2AP|math|Les nombres jusqu’à 1 000": "2AP-math-2",
+  "2AP|math|Addition avec retenue": "2AP-math-3",
+  "2AP|math|Initiation à la multiplication": "2AP-math-4",
+  "2AP|math|Mesurer des longueurs : le mètre et le centimètre": "2AP-math-5",
+  "2AP|math|Lire l’heure": "2AP-math-6",
+  "2AP|math|Les droites et les segments": "2AP-math-7",
+  "3AP|math|Les nombres jusqu’à 10 000": "3AP-math-2",
+  "3AP|math|La division : partage et groupement": "3AP-math-3",
+  "3AP|math|Les angles droits": "3AP-math-4",
+  "3AP|math|Périmètre du carré et du rectangle": "3AP-math-5",
+  "3AP|math|Les masses : le kilogramme et le gramme": "3AP-math-6",
+  "4AP|math|Les grands nombres jusqu’à 999 999": "4AP-math-2",
+  "4AP|math|La multiplication posée": "4AP-math-3",
+  "4AP|math|La division euclidienne": "4AP-math-4",
+  "4AP|math|Aire du carré et du rectangle": "4AP-math-5",
+  "4AP|math|Les droites parallèles et perpendiculaires": "4AP-math-6",
+  "5AP|math|Addition et soustraction des décimaux": "5AP-math-2",
+  "5AP|math|Fractions et nombres décimaux": "5AP-math-3",
+  "5AP|math|Le cercle et le disque": "5AP-math-4",
+  "5AP|math|Les volumes : le cube et le pavé droit": "5AP-math-5",
+  "5AP|math|Les durées": "5AP-math-6",
+  "6AP|math|Multiplication et division des décimaux": "6AP-math-2",
+  "6AP|math|Les échelles": "6AP-math-3",
+  "6AP|math|Aire du triangle et du disque": "6AP-math-4",
+  "6AP|math|La vitesse moyenne": "6AP-math-5",
+  "6AP|math|Préparer l’examen provincial": "6AP-math-6"
+};
