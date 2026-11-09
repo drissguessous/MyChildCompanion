@@ -11,6 +11,7 @@ import { useI18n } from '../i18n';
 import { planProgress } from '../lib/plan';
 import { resolveActivity } from '../lib/activities';
 import { LanguagePicker } from '../ui/LanguagePicker';
+import { VoicePicker } from '../ui/VoicePicker';
 import { streakOf, useApp } from '../store/AppContext';
 import type { Attempt } from '../store/types';
 import { AvatarView, Badge, Btn, Card, Field, H, Muted, P, Row, Screen } from '../ui/kit';
@@ -203,6 +204,7 @@ function SettingsBody() {
         <H style={{ fontSize: 17 }}>🌍 {t('Langue')}</H>
         <LanguagePicker />
       </Card>
+      <Card><VoicePicker /></Card>
       <Card>
         <H style={{ fontSize: 17 }}>{t('Mot de passe parent')}</H>
         <Field label={t('Nouveau mot de passe')} value={pwd} onChangeText={setPwd} secureTextEntry />

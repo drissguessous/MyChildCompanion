@@ -73,6 +73,8 @@ export interface AppState {
   counters: Record<string, Record<string, number>>; // childId → compteurs (respiration…)
   missionsDone: Record<string, string[]>; // childId → dates des missions accomplies
   familyDone: Record<string, number[]>; // childId → semaines des défis famille relevés
+  voices?: { fr?: string; ar?: string; en?: string }; // voix choisies (propres à l'appareil)
+  voiceRate?: number;
 }
 
 export const EMPTY_STATE: AppState = {

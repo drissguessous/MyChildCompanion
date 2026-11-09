@@ -8,6 +8,7 @@ import type { Child, Teacher } from '../store/types';
 import { AvatarPicker } from '../ui/AvatarPicker';
 import { Btn, Card, Chip, Field, H, Muted, P, Row, Screen, TeacherBubble } from '../ui/kit';
 import { LanguagePicker } from '../ui/LanguagePicker';
+import { VoicePicker } from '../ui/VoicePicker';
 import { useNav } from '../ui/nav';
 import { ParentGate } from '../ui/ParentGate';
 import { C, EMOJI_AVATARS, TEACHER_EMOJIS } from '../ui/theme';
@@ -165,6 +166,7 @@ export function Personalize() {
         <AvatarPicker label={t('Ton avatar ou ta photo')} value={c.avatar} emojis={EMOJI_AVATARS} onChange={(avatar) => setC({ ...c, avatar })} />
       </Card>
       <TeacherFields teacher={c.teacher} onChange={(teacher) => setC({ ...c, teacher })} childName={c.name} />
+      <Card><VoicePicker /></Card>
       <Btn label={t('Enregistrer')} icon="✅" onPress={() => { saveChild({ ...c, teacher: { ...c.teacher, name: c.teacher.name.trim() || 'Oustadati' } }); nav.back(); }} />
     </Screen>
   );

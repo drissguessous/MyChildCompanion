@@ -2,6 +2,7 @@ import { NotoSansTifinagh_400Regular, useFonts } from '@expo-google-fonts/noto-s
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import { syncReminders } from './src/lib/reminders';
+import { loadVoices, setVoicePrefs } from './src/lib/voice';
 import { ActivityIndicator, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ChildEditor, Personalize } from './src/screens/ChildEditor';
@@ -62,6 +63,14 @@ function ReminderSync() {
   return null;
 }
 
+/** Applique les voix choisies et précharge le catalogue des voix. */
+function VoiceSync() {
+  const { state } = useApp();
+  useEffect(() => { void loadVoices(); }, []);
+  useEffect(() => { setVoicePrefs({ voices: state.voices, rate: state.voiceRate }); }, [state.voices, state.voiceRate]);
+  return null;
+}
+
 function Root() {
   const { ready, state } = useApp();
   const [fontsLoaded, fontError] = useFonts({ NotoSansTifinagh_400Regular });
@@ -87,6 +96,7 @@ export default function App() {
       <AppProvider>
         <StatusBar style="dark" />
         <ReminderSync />
+        <VoiceSync />
         <Root />
       </AppProvider>
     </SafeAreaProvider>

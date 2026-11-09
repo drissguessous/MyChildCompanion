@@ -75,4 +75,6 @@ export const ZGH: Record<string, string> = {
   'Explique-moi': 'ⵙⵙⴼⵔ ⵉⵢⵉ',
   'Dire': 'ⵉⵏⵉ',
   'Écouter le cours': 'ⵙⴼⵍⴷ ⵉ ⵜⵎⵙⵉⵔⵜ',
+  'Vitesse': 'ⵜⴰⵣⵣⵍⴰ',
+  'Arabe': 'ⵜⴰⵄⵔⴰⴱⵜ',
 };
