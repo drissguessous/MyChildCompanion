@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Oustadati",
+    "slug": "oustadati",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ma.oustadati.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Pour prendre une photo d’avatar.",
+        "NSPhotoLibraryUsageDescription": "Pour choisir une photo d’avatar."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFF8EE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "ma.oustadati.app",
+      "versionCode": 1,
+      "backgroundColor": "#FFF8EE"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "name": "Oustadati",
+      "shortName": "Oustadati",
+      "lang": "fr",
+      "themeColor": "#5B4BDB",
+      "backgroundColor": "#FFF8EE",
+      "output": "single"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pour choisir une photo d’avatar.",
+          "cameraPermission": "Pour prendre une photo d’avatar."
+        }
+      ],
+      "expo-font"
+    ],
+    "scheme": "oustadati",
+    "backgroundColor": "#FFF8EE",
+    "description": "Accompagnement scolaire bienveillant pour les élèves du système Massar, du CP au bac.",
+    "experiments": {
+      "baseUrl": "/mychildcompanion"
+    }
+  }
+}

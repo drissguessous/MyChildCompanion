@@ -1,0 +1,58 @@
+name: Android (APK)
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['docs/**', '**.md']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+      - run: npm ci
+      - run: npm test
+      - name: Générer le projet Android
+        run: npx expo prebuild --platform android --no-install
+        env:
+          CI: 1
+      - name: Construire l’APK
+        working-directory: android
+        run: ./gradlew assembleRelease --no-daemon -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
+        env:
+          GRADLE_OPTS: -Xmx4g -Dorg.gradle.jvmargs=-Xmx4g
+      - run: cp android/app/build/outputs/apk/release/app-release.apk Oustadati.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Oustadati-apk
+          path: Oustadati.apk
+      - name: Publier dans la release « latest »
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Oustadati — dernière version Android
+          prerelease: false
+          make_latest: true
+          body: |
+            APK Android d’Oustadati, construit automatiquement depuis `main` (${{ github.sha }}).
+            Installation : téléchargez `Oustadati.apk` sur le téléphone, puis autorisez l’installation depuis cette source.
+            Version web (et iPhone via « Sur l’écran d’accueil ») : https://drissguessous.github.io/mychildcompanion/
+          files: Oustadati.apk
