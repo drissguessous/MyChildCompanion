@@ -1,6 +1,6 @@
 import { Platform, Share } from 'react-native';
 
-export const WEB_URL = 'https://drissguessous.github.io/mychildcompanion/';
+export const WEB_URL = 'https://drissguessous.github.io/MyChildCompanion/';
 
 /** Partage natif (WhatsApp, SMS…) ; sur le web, partage du navigateur ou copie du lien. */
 export async function shareInvite(message: string): Promise<'shared' | 'copied' | 'failed'> {

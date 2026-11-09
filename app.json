@@ -49,7 +49,7 @@
     "backgroundColor": "#FFF8EE",
     "description": "Accompagnement scolaire bienveillant pour les élèves du système Massar, du CP au bac.",
     "experiments": {
-      "baseUrl": "/mychildcompanion"
+      "baseUrl": "/MyChildCompanion"
     }
   }
 }

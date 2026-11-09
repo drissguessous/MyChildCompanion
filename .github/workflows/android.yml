@@ -54,5 +54,5 @@ jobs:
           body: |
             APK Android d’Oustadati, construit automatiquement depuis `main` (${{ github.sha }}).
             Installation : téléchargez `Oustadati.apk` sur le téléphone, puis autorisez l’installation depuis cette source.
-            Version web (et iPhone via « Sur l’écran d’accueil ») : https://drissguessous.github.io/mychildcompanion/
+            Version web (et iPhone via « Sur l’écran d’accueil ») : https://drissguessous.github.io/MyChildCompanion/
           files: Oustadati.apk

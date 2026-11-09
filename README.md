@@ -4,8 +4,8 @@ Application d’accompagnement scolaire bienveillant pour les élèves marocains
 
 | Accès | Lien |
 |---|---|
-| Web (et iPhone : Partager → « Sur l’écran d’accueil ») | https://drissguessous.github.io/mychildcompanion/ |
-| APK Android | [Releases → latest](https://github.com/drissguessous/mychildcompanion/releases/latest) |
+| Web (et iPhone : Partager → « Sur l’écran d’accueil ») | https://drissguessous.github.io/MyChildCompanion/ |
+| APK Android | [Releases → latest](https://github.com/drissguessous/MyChildCompanion/releases/latest) |
 | iOS natif | prêt pour EAS Build, en attente d’un compte Apple Developer |
 
 ## Fonctions
