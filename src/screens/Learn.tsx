@@ -12,6 +12,7 @@ import { html, printHtml } from '../lib/print';
 import { useApp } from '../store/AppContext';
 import type { Attempt } from '../store/types';
 import { Badge, Btn, Card, H, Muted, P, Row, Screen, T } from '../ui/kit';
+import { SpeakButton } from '../ui/VoiceButtons';
 import { useNav } from '../ui/nav';
 import { C } from '../ui/theme';
 
@@ -114,6 +115,15 @@ export function Lesson({ chapterId }: { chapterId: string }) {
       title={ch.title}
       footer={<Btn icon="✏️" label={t('Je m’exerce')} onPress={() => nav.push({ name: 'Quiz', mode: 'exercice', refId: ch.id })} />}
     >
+      <View style={{ marginBottom: 12, alignSelf: rtl ? 'flex-end' : 'flex-start' }}>
+        <SpeakButton
+          label={t('Écouter le cours')}
+          segments={[
+            { text: ch.title, lang: ch.lang === 'ar' ? 'ar' : ch.lang === 'en' ? 'en' : 'fr' },
+            ...ch.lesson.map((b) => ({ text: 'text' in b ? b.text : b.items.join('. '), lang: (ch.lang === 'ar' ? 'ar' : ch.lang === 'en' ? 'en' : 'fr') as 'ar' | 'en' | 'fr' })),
+          ]}
+        />
+      </View>
       <Card style={{ backgroundColor: C.okSoft, borderColor: C.okSoft }}>
         <P rtl={rtl} style={{ fontWeight: '800', marginBottom: 4 }}>{rtl ? '🎯 الأهداف' : '🎯 Objectifs'}</P>
         {ch.objectives.map((o) => <P rtl={rtl} key={o}>•  {o}</P>)}

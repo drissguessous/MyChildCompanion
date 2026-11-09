@@ -1,6 +1,6 @@
 // Vérifie la cohérence du contenu et la logique (correction, générateurs, plan, démo).
 // Exécuté avec tsx : npx tsx scripts/check-content.mjs
-import { CHAPTERS, EXAMS_LIST, PROGRAMME, SKILLS, generate, gradeAll, buildDemoState, resolveActivity, buildPlan, masteryFromBilan, bilanRef, plannedReminders, translate } from './check-entry.ts';
+import { hintFor, SKILL_HINTS, wordsToNumber, matchChoice, matchTrueFalse, CHAPTERS, EXAMS_LIST, PROGRAMME, SKILLS, generate, gradeAll, buildDemoState, resolveActivity, buildPlan, masteryFromBilan, bilanRef, plannedReminders, translate } from './check-entry.ts';
 
 let errors = 0;
 const fail = (m) => { console.error('✗ ' + m); errors++; };
@@ -44,6 +44,12 @@ for (const a of demo.attempts) if (!resolveActivity(a.kind, a.refId)) fail(`dém
 const rem = plannedReminders(demo);
 if (!rem.length) fail('aucun rappel planifié pour la démo');
 if (translate('ar', 'Commencer') === 'Commencer') fail('traduction arabe absente');
+for (const s of SKILLS) if (!SKILL_HINTS[s.id]) fail(`explication manquante pour ${s.id}`);
+for (const c of CHAPTERS) { const act = resolveActivity('exercice', c.id); for (const q of c.exercises) { const h = hintFor(q, act); if (!h.tip || (!h.rules.length && !h.method)) fail(`${c.id}/${q.id}: explication vide`); } }
+const nums = { 'vingt-quatre': '24', 'moins trois': '-3', 'deux virgule cinq': '2,5', 'quatre-vingt-dix': '90', 'cent vingt': '120', '42': '42', 'اثنا عشر': undefined, 'ثلاثة': '3' };
+for (const [k, v] of Object.entries(nums)) if (v !== undefined && wordsToNumber(k) !== v) fail(`dictée nombre « ${k} » → ${wordsToNumber(k)} (attendu ${v})`);
+if (matchChoice('réponse B', ['x', 'y', 'z']) !== 1 || matchChoice('la troisième', ['x', 'y', 'z']) !== 2) fail('dictée QCM');
+if (matchTrueFalse('c’est vrai') !== true || matchTrueFalse('faux') !== false) fail('dictée vrai/faux');
 
 if (errors) { console.error(`\n${errors} erreur(s).`); process.exit(1); }
 console.log(`✓ Contenu et logique vérifiés : ${CHAPTERS.length} cours, ${EXAMS_LIST.length} examens, ${SKILLS.length} générateurs × 39 graines, 12 bilans et plans, démo (${demo.attempts.length} tentatives, ${rem.length} rappels).`);

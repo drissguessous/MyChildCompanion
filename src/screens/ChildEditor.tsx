@@ -10,9 +10,9 @@ import { Btn, Card, Chip, Field, H, Muted, P, Row, Screen, TeacherBubble } from 
 import { LanguagePicker } from '../ui/LanguagePicker';
 import { useNav } from '../ui/nav';
 import { ParentGate } from '../ui/ParentGate';
-import { C, EMOJI_AVATARS, TEACHER_AVATARS } from '../ui/theme';
+import { C, EMOJI_AVATARS, TEACHER_EMOJIS } from '../ui/theme';
 
-const DEFAULT_TEACHER: Teacher = { name: 'Oustadati', gender: 'f', avatar: { kind: 'emoji', value: '👩‍🏫', bg: '#DDD6FE' } };
+const DEFAULT_TEACHER: Teacher = { name: 'Oustadati', gender: 'f', avatar: { kind: 'illus', id: 't1', bg: '#DDD6FE' } };
 
 function TeacherFields({ teacher, onChange, childName }: { teacher: Teacher; onChange: (t: Teacher) => void; childName: string }) {
   const { t } = useI18n();
@@ -26,7 +26,7 @@ function TeacherFields({ teacher, onChange, childName }: { teacher: Teacher; onC
         <Chip label={t('Une professeure')} active={f} onPress={() => onChange({ ...teacher, gender: 'f' })} />
         <Chip label={t('Un professeur')} active={!f} onPress={() => onChange({ ...teacher, gender: 'm' })} />
       </Row>
-      <AvatarPicker label={t('Avatar ou photo du professeur')} value={teacher.avatar} emojis={TEACHER_AVATARS} onChange={(avatar) => onChange({ ...teacher, avatar })} />
+      <AvatarPicker label={t('Avatar ou photo du professeur')} value={teacher.avatar} emojis={TEACHER_EMOJIS} teacher onChange={(avatar) => onChange({ ...teacher, avatar })} />
       <TeacherBubble
         avatar={teacher.avatar}
         name={teacher.name || 'Oustadati'}
@@ -42,7 +42,7 @@ function ChildForm({ initial, onboarding }: { initial?: Child; onboarding?: bool
   const { saveChild, selectChild, removeChild } = useApp();
   const [c, setC] = useState<Child>(initial ?? {
     id: `c-${Date.now()}`, name: '', gender: 'f', levelId: '1AP', scienceLang: 'fr', chronoEnabled: false, createdAt: new Date().toISOString(),
-    avatar: { kind: 'emoji', value: '🦋', bg: '#FDE68A' }, teacher: DEFAULT_TEACHER,
+    avatar: { kind: 'illus', id: 'k1', bg: '#FDE68A' }, teacher: DEFAULT_TEACHER,
   });
   const [confirmDelete, setConfirmDelete] = useState(false);
   const set = (p: Partial<Child>) => setC((x) => ({ ...x, ...p }));

@@ -4,7 +4,10 @@ import type { Plan } from '../lib/plan';
 import type { Answers } from '../lib/grading';
 
 /** Avatar : un emoji, ou une photo (URI data:image/... stockée localement). */
-export type Avatar = { kind: 'emoji'; value: string; bg: string } | { kind: 'photo'; uri: string };
+export type Avatar =
+  | { kind: 'illus'; id: string; bg: string }
+  | { kind: 'emoji'; value: string; bg: string }
+  | { kind: 'photo'; uri: string };
 
 export interface Teacher {
   name: string;

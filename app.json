@@ -43,7 +43,14 @@
           "cameraPermission": "Pour prendre une photo d’avatar."
         }
       ],
-      "expo-font"
+      "expo-font",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Pour répondre aux exercices à voix haute.",
+          "speechRecognitionPermission": "Pour comprendre les réponses dites à voix haute."
+        }
+      ]
     ],
     "scheme": "oustadati",
     "backgroundColor": "#FFF8EE",

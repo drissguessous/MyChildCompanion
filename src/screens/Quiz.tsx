@@ -5,7 +5,10 @@ import { getExam } from '../data';
 import { getLevel } from '../data/curriculum';
 import type { Question } from '../data/types';
 import { useI18n } from '../i18n';
-import { resolveActivity, type ActivityKind } from '../lib/activities';
+import { resolveActivity, type Activity, type ActivityKind } from '../lib/activities';
+import { hintFor } from '../lib/hints';
+import { matchChoice, matchTrueFalse, wordsToNumber, type VoiceLang } from '../lib/voice';
+import { MicButton, SpeakButton } from '../ui/VoiceButtons';
 import { formatGrade, gradeAll, toScale, type AnswerValue, type Answers, type QuestionOutcome } from '../lib/grading';
 import { masteryFromBilan } from '../lib/plan';
 import { html, printHtml } from '../lib/print';
@@ -15,10 +18,20 @@ import { Badge, Btn, Card, H, Muted, P, Row, Screen, TeacherBubble, styles as ki
 import { useNav } from '../ui/nav';
 import { C, R } from '../ui/theme';
 
-function QuestionCard({ q, n, value, onChange, outcome, locked, rtl }: {
-  q: Question; n: number; value: AnswerValue; onChange: (v: AnswerValue) => void; outcome?: QuestionOutcome; locked: boolean; rtl: boolean;
+function QuestionCard({ q, n, value, onChange, outcome, locked, rtl, act }: {
+  q: Question; n: number; value: AnswerValue; onChange: (v: AnswerValue) => void; outcome?: QuestionOutcome; locked: boolean; rtl: boolean; act: Activity;
 }) {
   const { t } = useI18n();
+  const [showHint, setShowHint] = useState(false);
+  const vlang: VoiceLang = act.lang === 'ar' ? 'ar' : act.lang === 'en' ? 'en' : 'fr';
+  const readSegments = [{ text: q.prompt, lang: vlang }, ...(q.type === 'qcm' ? q.choices.map((c, i) => ({ text: `${'ABCD'[i]}. ${c}`, lang: vlang })) : [])];
+  const hint = showHint ? hintFor(q, act) : undefined;
+  function onVoice(text: string) {
+    if (q.type === 'qcm') { const i = matchChoice(text, q.choices); if (i !== undefined) onChange(i); return; }
+    if (q.type === 'tf') { const b = matchTrueFalse(text); if (b !== undefined) onChange(b); return; }
+    if (q.type === 'number') { const v = wordsToNumber(text); if (v !== undefined) onChange(v); return; }
+    onChange(typeof value === 'string' && q.type === 'open' && value ? `${value} ${text}` : text);
+  }
   const border = outcome?.status === 'correct' ? C.ok : outcome?.status === 'review' ? C.review : C.line;
   const dir = rtl ? ({ writingDirection: 'rtl', textAlign: 'right' } as const) : ({ writingDirection: 'ltr', textAlign: 'left' } as const);
   const option = (label: string, selected: boolean, onPress: () => void) => (
@@ -42,6 +55,26 @@ function QuestionCard({ q, n, value, onChange, outcome, locked, rtl }: {
         {outcome?.status === 'pending' && <Badge tone="muted" label={`✍️ ${t('Lu avec le parent')}`} />}
       </Row>
       <P rtl={rtl} style={{ fontWeight: '600' }}>{q.prompt}</P>
+      <Row gap={8} style={{ marginTop: 8 }}>
+        <SpeakButton size="s" segments={readSegments} label={t('Écouter')} />
+        {!locked && <MicButton lang={vlang} onText={onVoice} />}
+        {!locked && (
+          <Pressable accessibilityRole="button" onPress={() => setShowHint((h) => !h)} hitSlop={8}
+            style={{ backgroundColor: showHint ? C.ok : C.okSoft, borderRadius: 999, paddingVertical: 6, paddingHorizontal: 12 }}>
+            <Text style={{ color: showHint ? '#fff' : C.ok, fontWeight: '700', fontSize: 13 }}>💡 {t('Explique-moi')}</Text>
+          </Pressable>
+        )}
+      </Row>
+      {hint && (
+        <View style={{ backgroundColor: C.okSoft, borderRadius: 12, padding: 12, marginTop: 10 }}>
+          {!!hint.method && <P rtl={hint.lang === 'ar'} style={{ marginBottom: 6 }}>🧭 {hint.method}</P>}
+          {hint.rules.map((r) => <P key={r} rtl={hint.lang === 'ar'} style={{ marginBottom: 6 }}>📌 {r}</P>)}
+          <P rtl={hint.lang === 'ar'} style={{ fontStyle: 'italic' }}>💡 {hint.tip}</P>
+          <View style={{ marginTop: 8 }}>
+            <SpeakButton size="s" label={t('Écouter l’explication')} segments={[hint.method, ...hint.rules, hint.tip].filter(Boolean).map((x) => ({ text: x as string, lang: hint.lang === 'ar' ? 'ar' : 'fr' }))} />
+          </View>
+        </View>
+      )}
       {q.type === 'qcm' && q.choices.map((c, i) => option(c, value === i, () => onChange(i)))}
       {q.type === 'tf' && (rtl
         ? [option('صحيح', value === true, () => onChange(true)), option('خطأ', value === false, () => onChange(false))]
@@ -194,7 +227,7 @@ export function Quiz({ mode, refId }: { mode: ActivityKind; refId: string }) {
             const locked = phase === 'checked' || (phase === 'retry' && !reviewIds.has(q.id));
             return (
               <QuestionCard
-                key={q.id} q={q} n={n} rtl={rtl} value={answers[q.id]} outcome={outcome} locked={locked}
+                key={q.id} q={q} n={n} rtl={rtl} act={act} value={answers[q.id]} outcome={outcome} locked={locked}
                 onChange={(v) => setAnswers((a) => ({ ...a, [q.id]: v }))}
               />
             );

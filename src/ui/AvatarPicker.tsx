@@ -5,6 +5,7 @@ import { Pressable, Text, View } from 'react-native';
 import { useI18n } from '../i18n';
 import type { Avatar } from '../store/types';
 import { AvatarView, Btn, Muted, Row } from './kit';
+import { IllustratedAvatar, KID_AVATARS, TEACHER_ILLUS } from './Illustrated';
 import { AVATAR_BGS, C } from './theme';
 
 /** Réduit la photo à 256 px pour la stocker sur l'appareil (aucun envoi en ligne). */
@@ -14,13 +15,14 @@ async function toSmallDataUri(uri: string): Promise<string> {
   return `data:image/jpeg;base64,${out.base64}`;
 }
 
-export function AvatarPicker({ value, onChange, emojis, label }: {
-  value: Avatar; onChange: (a: Avatar) => void; emojis: string[]; label: string;
+export function AvatarPicker({ value, onChange, emojis, label, teacher }: {
+  value: Avatar; onChange: (a: Avatar) => void; emojis: string[]; label: string; teacher?: boolean;
 }) {
+  const illus = teacher ? TEACHER_ILLUS : KID_AVATARS;
   const { t, ts } = useI18n();
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState('');
-  const bg = value.kind === 'emoji' ? value.bg : AVATAR_BGS[0];
+  const bg = value.kind === 'photo' ? AVATAR_BGS[0] : value.bg;
 
   async function pick(camera: boolean) {
     setMsg('');
@@ -55,6 +57,17 @@ export function AvatarPicker({ value, onChange, emojis, label }: {
         </View>
       </Row>
       {!!msg && <Muted style={{ color: C.review, marginBottom: 8 }}>{msg}</Muted>}
+      <Row gap={8} style={{ marginBottom: 8 }}>
+        {illus.map((a) => {
+          const selected = value.kind === 'illus' && value.id === a.id;
+          return (
+            <Pressable key={a.id} accessibilityRole="button" accessibilityLabel={`Avatar ${a.id}`} onPress={() => onChange({ kind: 'illus', id: a.id, bg })}
+              style={{ borderRadius: 30, borderWidth: 3, borderColor: selected ? C.primary : 'transparent' }}>
+              <IllustratedAvatar id={a.id} bg={bg} size={52} />
+            </Pressable>
+          );
+        })}
+      </Row>
       <Row gap={8}>
         {emojis.map((e) => (
           <Pressable
@@ -71,7 +84,7 @@ export function AvatarPicker({ value, onChange, emojis, label }: {
           </Pressable>
         ))}
       </Row>
-      {value.kind === 'emoji' && (
+      {value.kind !== 'photo' && (
         <Row gap={8} style={{ marginTop: 10 }}>
           {AVATAR_BGS.map((c) => (
             <Pressable

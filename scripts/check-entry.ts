@@ -9,3 +9,5 @@ export { resolveActivity, bilanRef } from '../src/lib/activities';
 export { buildPlan, masteryFromBilan } from '../src/lib/plan';
 export { plannedReminders } from '../src/lib/reminders-core';
 export { translate } from '../src/i18n/translate';
+export { hintFor, SKILL_HINTS } from '../src/lib/hints';
+export { wordsToNumber, matchChoice, matchTrueFalse } from '../src/lib/voice-core';

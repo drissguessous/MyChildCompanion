@@ -6,6 +6,8 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useI18n } from '../i18n';
 import type { Avatar } from '../store/types';
+import { IllustratedAvatar } from './Illustrated';
+import { SpeakButton } from './VoiceButtons';
 import { useNav } from './nav';
 import { C, R, S } from './theme';
 
@@ -118,6 +120,7 @@ export function Chip({ label, active, onPress, color }: { label: string; active?
 }
 
 export function AvatarView({ avatar, size = 56 }: { avatar: Avatar; size?: number }) {
+  if (avatar.kind === 'illus') return <IllustratedAvatar id={avatar.id} bg={avatar.bg} size={size} />;
   if (avatar.kind === 'photo') {
     return <Image source={{ uri: avatar.uri }} style={{ width: size, height: size, borderRadius: size / 2, backgroundColor: C.line }} />;
   }
@@ -130,13 +133,14 @@ export function AvatarView({ avatar, size = 56 }: { avatar: Avatar; size?: numbe
 
 /** Bulle du professeur-compagnon. */
 export function TeacherBubble({ avatar, name, text }: { avatar: Avatar; name: string; text: string }) {
-  const { ts, row, rtl } = useI18n();
+  const { ts, row, rtl, lang } = useI18n();
   return (
     <View style={[styles.bubbleRow, { flexDirection: row }]}>
       <AvatarView avatar={avatar} size={52} />
       <View style={[styles.bubble, rtl && { borderTopLeftRadius: 16, borderTopRightRadius: 4 }]}>
         <Text style={[styles.bubbleName, ts]}>{name}</Text>
         <Text style={[styles.bubbleTxt, ts]}>{text}</Text>
+        {lang !== 'zgh' && <View style={{ marginTop: 6, alignSelf: rtl ? 'flex-end' : 'flex-start' }}><SpeakButton size="s" segments={[{ text }]} /></View>}
       </View>
     </View>
   );

@@ -77,20 +77,20 @@ export function buildDemoState(parent: AppState['parent']): AppState {
     {
       id: 'demo-yasmine', name: 'Yasmine', gender: 'f', levelId: '4AP', scienceLang: 'fr', chronoEnabled: false, createdAt: now,
       reminder: { enabled: true, hour: 18, minute: 0 },
-      avatar: { kind: 'emoji', value: '🦋', bg: '#FDE68A' },
-      teacher: { name: 'Oustadati Nadia', gender: 'f', avatar: { kind: 'emoji', value: '👩‍🏫', bg: '#DDD6FE' } },
+      avatar: { kind: 'illus', id: 'k5', bg: '#FDE68A' },
+      teacher: { name: 'Oustadati Nadia', gender: 'f', avatar: { kind: 'illus', id: 't1', bg: '#DDD6FE' } },
     },
     {
       id: 'demo-adam', name: 'Adam', gender: 'm', levelId: '2AC', scienceLang: 'fr', chronoEnabled: true, createdAt: now,
       reminder: { enabled: true, hour: 18, minute: 0 },
-      avatar: { kind: 'emoji', value: '🦁', bg: '#BFDBFE' },
-      teacher: { name: 'Ustad Karim', gender: 'm', avatar: { kind: 'emoji', value: '👨‍🏫', bg: '#BBF7D0' } },
+      avatar: { kind: 'illus', id: 'k2', bg: '#BFDBFE' },
+      teacher: { name: 'Ustad Karim', gender: 'm', avatar: { kind: 'illus', id: 't2', bg: '#BBF7D0' } },
     },
     {
       id: 'demo-salma', name: 'Salma', gender: 'f', levelId: '2BAC', scienceLang: 'fr', chronoEnabled: true, createdAt: now,
       reminder: { enabled: true, hour: 18, minute: 0 },
-      avatar: { kind: 'emoji', value: '🌸', bg: '#FBCFE8' },
-      teacher: { name: 'Oustadati', gender: 'f', avatar: { kind: 'emoji', value: '🧕', bg: '#FED7AA' } },
+      avatar: { kind: 'illus', id: 'k7', bg: '#FBCFE8' },
+      teacher: { name: 'Oustadati', gender: 'f', avatar: { kind: 'illus', id: 't3', bg: '#FED7AA' } },
     },
   ];
   const profiles: Record<string, { skill: number; seed: number }> = {

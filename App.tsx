@@ -2,7 +2,7 @@ import { NotoSansTifinagh_400Regular, useFonts } from '@expo-google-fonts/noto-s
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import { syncReminders } from './src/lib/reminders';
-import { ActivityIndicator, Text, View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ChildEditor, Personalize } from './src/screens/ChildEditor';
 import { Correction } from './src/screens/Correction';
@@ -15,6 +15,7 @@ import { Quiz, Result } from './src/screens/Quiz';
 import { Search } from './src/screens/Search';
 import { AppProvider, useApp } from './src/store/AppContext';
 import { NavProvider, useNav, type Route } from './src/ui/nav';
+import { IllustratedAvatar } from './src/ui/Illustrated';
 import { C } from './src/ui/theme';
 
 function Router() {
@@ -67,7 +68,7 @@ function Root() {
   if (!ready || (!fontsLoaded && !fontError)) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: C.bg }}>
-        <Text style={{ fontSize: 56 }}>👩‍🏫</Text>
+        <IllustratedAvatar id="t3" bg="#ECE9FF" size={88} />
         <ActivityIndicator color={C.primary} style={{ marginTop: 12 }} />
       </View>
     );

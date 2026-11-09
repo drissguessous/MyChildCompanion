@@ -71,4 +71,8 @@ export const ZGH: Record<string, string> = {
   '{name}, ta mission du jour t’attend 🎯': '{name}, ⵜⴰⵡⵓⵔⵉ ⵏ ⵡⴰⵙⵙ ⵜⵔⴰⵊⵓ ⴽ 🎯',
   'Rappel quotidien': 'ⴰⵙⵎⵜⵜⵉ ⵏ ⴽⵓ ⴰⵙⵙ',
   'Heure': 'ⵜⴰⵙⵔⴰⴳⵜ',
+  'Écouter': 'ⵙⴼⵍⴷ',
+  'Explique-moi': 'ⵙⵙⴼⵔ ⵉⵢⵉ',
+  'Dire': 'ⵉⵏⵉ',
+  'Écouter le cours': 'ⵙⴼⵍⴷ ⵉ ⵜⵎⵙⵉⵔⵜ',
 };

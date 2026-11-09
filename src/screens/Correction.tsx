@@ -7,6 +7,7 @@ import { childAnswerText, correctAnswerText, html, printHtml } from '../lib/prin
 import { useApp } from '../store/AppContext';
 import { Badge, Btn, Card, H, Muted, P, Row, Screen } from '../ui/kit';
 import { ParentGate } from '../ui/ParentGate';
+import { SpeakButton } from '../ui/VoiceButtons';
 import { C } from '../ui/theme';
 
 function Stepper({ value, max, onChange }: { value: number; max: number; onChange: (v: number) => void }) {
@@ -75,6 +76,9 @@ function CorrectionBody({ attemptId }: { attemptId: string }) {
               <Muted style={{ color: C.ok, fontWeight: '800' }}>{q.type === 'open' ? t('Corrigé type') : t('Réponse attendue')}</Muted>
               <P rtl={rtl} style={{ fontWeight: '700' }}>{correctAnswerText(q)}</P>
               <P rtl={rtl} style={{ marginTop: 4 }}>{q.explanation}</P>
+              <View style={{ marginTop: 8 }}>
+                <SpeakButton size="s" label={t('Écouter l’explication')} segments={[{ text: q.prompt }, { text: `${t('Réponse attendue')} : ${correctAnswerText(q)}` }, { text: q.explanation }]} />
+              </View>
             </View>
             {q.type === 'open' && (
               <View style={{ marginTop: 12 }}>

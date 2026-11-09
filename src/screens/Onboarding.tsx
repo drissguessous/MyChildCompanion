@@ -5,6 +5,7 @@ import { useI18n } from '../i18n';
 import { useApp } from '../store/AppContext';
 import { Btn, Card, Field, H, Muted, P, Screen } from '../ui/kit';
 import { LanguagePicker } from '../ui/LanguagePicker';
+import { IllustratedAvatar } from '../ui/Illustrated';
 import { useNav } from '../ui/nav';
 import { C } from '../ui/theme';
 
@@ -18,7 +19,7 @@ export function Welcome() {
     <Screen back={false}>
       <LanguagePicker />
       <View style={{ alignItems: 'center', marginVertical: 20 }}>
-        <Text style={{ fontSize: 72 }}>👩‍🏫</Text>
+        <IllustratedAvatar id="t3" bg="#ECE9FF" size={110} />
         <Text style={{ fontSize: 34, fontWeight: '900', color: C.primary, marginTop: 8 }}>Oustadati</Text>
         <Text style={{ fontSize: 22, color: C.muted, marginTop: 2 }}>أستاذتي · ⵜⴰⵙⵍⵎⴰⴷⵜ ⵉⵏⵓ</Text>
         <P style={{ textAlign: 'center', marginTop: 12 }}>
