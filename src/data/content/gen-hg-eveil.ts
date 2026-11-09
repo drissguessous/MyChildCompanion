@@ -98,7 +98,7 @@ export const GEN_HG_EVEIL: Chapter[] = [
       { id: 'q2', type: 'qcm', prompt: 'Quelle est la meilleure boisson pour la santé ?', choices: ['l’eau', 'le soda', 'le sirop'], answer: 0, explanation: 'L’eau hydrate le corps sans ajouter de sucre.' },
       { id: 'q3', type: 'tf', prompt: 'Vrai ou faux : il faut manger des bonbons à chaque repas.', answer: false, explanation: 'Faux : les sucreries se mangent de temps en temps, en petite quantité.' },
       { id: 'q4', type: 'qcm', prompt: 'Lequel est un légume ?', choices: ['la carotte', 'le fromage', 'le pain'], answer: 0, explanation: 'La carotte est un légume ; le fromage est laitier, le pain est une céréale.' },
-      { id: 'q5', type: 'text', prompt: 'Les lentilles, les œufs et le poisson : cite un autre aliment de cette famille.', accept: ['la viande', 'viande', 'le poulet', 'poulet', 'les pois chiches', 'pois chiches', 'les feves', 'feves', 'les haricots', 'haricots', 'la sardine', 'sardine', 'le thon', 'thon'], explanation: 'Cette famille réunit viande, poisson, œufs et légumineuses : par exemple la viande, le poulet, les pois chiches ou les fèves.' },
+      { id: 'q5', type: 'qcm', prompt: 'Lequel est de la même famille que les œufs et le poisson ?', choices: ['le riz', 'l’orange', 'les lentilles'], answer: 2, explanation: 'Les lentilles sont des légumineuses : elles sont dans la famille viande, poisson, œufs, légumineuses.' },
     ],
   },
   // ───────────── 3AP ─────────────
@@ -358,7 +358,7 @@ export const GEN_HG_EVEIL: Chapter[] = [
     objectives: ['Situer les Almoravides et les Almohades dans le temps', 'Citer leurs principaux souverains et monuments'],
     lesson: [
       { type: 'h', text: 'Les Almoravides (XIe – XIIe siècle)' },
-      { type: 'p', text: 'Les Almoravides sont des tribus amazighes venues du Sahara. Leur grand souverain, Youssef Ibn Tachfine, fonde Marrakech au XIe siècle et unifie le Maroc. Il intervient en Andalousie et remporte la bataille de Zallaqa en 1086.' },
+      { type: 'p', text: 'Les Almoravides sont des tribus amazighes venues du Sahara. Ils fondent Marrakech au XIe siècle ; leur grand souverain, Youssef Ibn Tachfine, la développe et unifie le Maroc. Il intervient en Andalousie et remporte la bataille de Zallaqa en 1086.' },
       { type: 'h', text: 'Les Almohades (XIIe – XIIIe siècle)' },
       { type: 'p', text: 'Le mouvement almohade naît dans le Haut Atlas avec Ibn Toumert. Son successeur Abd al-Mumin prend Marrakech au milieu du XIIe siècle et construit un empire qui va du Maroc à l’actuelle Libye, avec une partie de l’Andalousie.' },
       { type: 'rule', text: 'Almoravides puis Almohades ont fait du Maroc le centre de grands empires allant du Sahara à l’Andalousie, avec Marrakech pour capitale.' },
@@ -367,7 +367,7 @@ export const GEN_HG_EVEIL: Chapter[] = [
       { type: 'tip', text: 'Si tu passes par Marrakech ou Rabat, regarde la Koutoubia ou la Tour Hassan : tu verras l’histoire de tes propres yeux !' },
     ],
     exercises: [
-      { id: 'q1', type: 'qcm', prompt: 'Quel souverain almoravide a fondé Marrakech ?', choices: ['Youssef Ibn Tachfine', 'Idriss II', 'Abd al-Mumin'], answer: 0, explanation: 'Youssef Ibn Tachfine a fondé Marrakech au XIe siècle.' },
+      { id: 'q1', type: 'qcm', prompt: 'Quel est le grand souverain des Almoravides ?', choices: ['Youssef Ibn Tachfine', 'Idriss II', 'Abd al-Mumin'], answer: 0, explanation: 'Youssef Ibn Tachfine a unifié le Maroc et remporté la bataille de Zallaqa ; Abd al-Mumin est almohade et Idriss II idrisside.' },
       { id: 'q2', type: 'qcm', prompt: 'Qui est à l’origine du mouvement almohade ?', choices: ['Ahmed al-Mansour', 'Ibn Toumert', 'Idriss Ier'], answer: 1, explanation: 'Ibn Toumert a lancé le mouvement almohade dans le Haut Atlas.' },
       { id: 'q3', type: 'number', prompt: 'En quelle année a eu lieu la bataille de Zallaqa ?', answer: 1086, explanation: 'Les Almoravides la remportent en 1086, en Andalousie.' },
       { id: 'q4', type: 'qcm', prompt: 'Quel monument de Rabat date des Almohades ?', choices: ['la Koutoubia', 'la Giralda', 'la Tour Hassan'], answer: 2, explanation: 'La Tour Hassan est à Rabat ; la Koutoubia est à Marrakech et la Giralda à Séville.' },
@@ -580,7 +580,6 @@ export const GEN_HG_EVEIL: Chapter[] = [
       { type: 'rule', text: 'Une échelle de 1/100 000 signifie que 1 cm sur la carte représente 100 000 cm en réalité, soit 1 km. Distance réelle = distance sur la carte × dénominateur de l’échelle.' },
       { type: 'example', text: 'Sur une carte à 1/50 000, deux villages sont à 6 cm. Distance réelle : 6 × 50 000 = 300 000 cm = 3 km.' },
       { type: 'p', text: 'L’échelle peut être numérique (1/25 000) ou graphique (un segment gradué). Une carte à grande échelle (1/10 000) montre une petite zone avec beaucoup de détails ; une carte à petite échelle (1/10 000 000) montre un vaste espace avec peu de détails.' },
-      { type: 'h', text: 'Les coordonnées géographiques' },
       { type: 'p', text: 'Pour localiser un lieu sur le globe, on utilise la latitude (par rapport à l’équateur, nord ou sud) et la longitude (par rapport au méridien de Greenwich, est ou ouest).' },
       { type: 'tip', text: 'Pour convertir, retiens : 100 000 cm = 1 km. Avec un peu d’entraînement, les calculs d’échelle deviennent un jeu !' },
     ],
@@ -603,7 +602,7 @@ export const GEN_HG_EVEIL: Chapter[] = [
       { type: 'rule', text: 'Au Moyen Âge, le Maroc est au cœur de grands empires qui relient l’Afrique subsaharienne, le Maghreb et Al-Andalus, grâce notamment au commerce transsaharien (or, sel).' },
       { type: 'h', text: 'Une civilisation brillante' },
       { type: 'p', text: 'Les villes se développent (Fès, Marrakech, Rabat), avec mosquées, souks et médersas. Des savants marquent l’époque : Ibn Rochd (Averroès) et Ibn Tofaïl à la cour almohade, puis Ibn Battouta, voyageur né à Tanger, et Ibn Khaldoun, historien, à l’époque mérinide.' },
-      { type: 'example', text: 'La médersa Bou Inania à Fès et la médersa Ben Youssef à Marrakech… attention : la première est mérinide (XIVe siècle), la seconde a été reconstruite par les Saadiens au XVIe siècle. Il faut toujours vérifier l’époque d’un monument !' },
+      { type: 'example', text: 'Chaque dynastie a laissé des monuments : la Koutoubia de Marrakech (almohade, XIIe siècle) ou la médersa Bou Inania de Fès (mérinide, XIVe siècle). Un monument est aussi une source pour l’historien.' },
       { type: 'tip', text: 'Fabrique une carte mentale par dynastie : origine, capitale, souverain clé, monument. Tu réviseras tout en un clin d’œil !' },
     ],
     exercises: [
@@ -646,7 +645,6 @@ export const GEN_HG_EVEIL: Chapter[] = [
       { type: 'h', text: 'Des progrès techniques' },
       { type: 'p', text: 'La caravelle (navire léger), la boussole, l’astrolabe et de meilleures cartes rendent possibles de longs voyages en haute mer.' },
       { type: 'rule', text: 'Dates clés : 1492, Christophe Colomb atteint l’Amérique ; 1498, Vasco de Gama arrive en Inde en contournant l’Afrique ; 1519-1522, l’expédition de Magellan réalise le premier tour du monde.' },
-      { type: 'h', text: 'Les conséquences' },
       { type: 'example', text: 'Le Portugal et l’Espagne bâtissent de vastes empires ; les populations amérindiennes subissent la conquête et les maladies. Au Maroc, le Portugal occupe plusieurs ports dès le XVe siècle (Ceuta en 1415, puis Asilah, El Jadida, Agadir…). La résistance s’organise, et les Saadiens reprennent Agadir en 1541.' },
       { type: 'p', text: 'Le centre du commerce mondial se déplace de la Méditerranée vers l’Atlantique, et les échanges entre continents se multiplient (maïs, pomme de terre, tomate venus d’Amérique).' },
       { type: 'tip', text: 'Trace sur une carte du monde les trajets de Colomb, Vasco de Gama et Magellan : tu comprendras leurs exploits bien mieux qu’en lisant seulement !' },
@@ -693,7 +691,7 @@ export const GEN_HG_EVEIL: Chapter[] = [
       { type: 'list', items: ['1947 : discours de Tanger du sultan, qui affirme l’unité et l’appartenance arabe et islamique du Maroc', '20 août 1953 : exil du sultan, début de la Révolution du Roi et du Peuple', '1953-1955 : actions de la résistance et de l’Armée de libération', 'Novembre 1955 : retour du sultan', '2 mars 1956 : fin du protectorat français ; avril 1956 : fin du protectorat espagnol au nord'] },
       { type: 'h', text: 'Parachever l’intégrité territoriale' },
       { type: 'example', text: 'Après 1956, le Maroc récupère Tanger (1956), Tarfaya (1958) et Sidi Ifni (1969). En 1975, la Marche verte permet la récupération des provinces du Sud.' },
-      { type: 'p', text: 'Mohammed Ben Youssef prend le titre de roi Mohammed V en 1957. L’État indépendant construit ses institutions (première Constitution en 1962) et sa monnaie, le dirham (1959).' },
+      { type: 'p', text: 'Mohammed Ben Youssef prend le titre de roi Mohammed V en 1957. L’État indépendant construit ses institutions (première Constitution en 1962) et sa propre monnaie, le dirham.' },
       { type: 'tip', text: 'Relie chaque date à un acteur (le sultan, les partis, la résistance, le peuple) : tu verras que l’indépendance est une œuvre collective, et tu la retiendras facilement !' },
     ],
     exercises: [

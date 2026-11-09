@@ -146,7 +146,7 @@ export const GEN_MATH_SECONDAIRE: Chapter[] = [
       { type: 'h', text: 'Les droites remarquables' },
       { type: 'list', items: ['Médiatrice d’un côté : droite perpendiculaire à ce côté en son milieu. Les trois médiatrices se coupent au centre du cercle circonscrit.', 'Hauteur : droite passant par un sommet et perpendiculaire au côté opposé. Les trois hauteurs se coupent en l’orthocentre.', 'Médiane : droite passant par un sommet et le milieu du côté opposé. Les trois médianes se coupent au centre de gravité.', 'Bissectrice : droite qui partage un angle en deux angles égaux. Les trois bissectrices se coupent au centre du cercle inscrit.'] },
       { type: 'rule', text: 'Tout point de la médiatrice d’un segment est à égale distance des extrémités de ce segment.' },
-      { type: 'tip', text: 'Pour retenir : médiaTRICE et MIlieu + perpendiculaire ; médiANE et sommet + milieu. Un petit dessin à main levée t’aide toujours.' },
+      { type: 'tip', text: 'Pour ne pas confondre : la médiatrice et la médiane passent toutes deux par un milieu, mais seule la médiatrice est perpendiculaire au côté, et seule la médiane passe par un sommet. Un petit dessin à main levée t’aide toujours.' },
     ],
     exercises: [
       { id: 'q1', type: 'number', prompt: 'Dans un triangle, deux angles mesurent 35° et 85°. Quelle est la mesure du troisième angle (en degrés) ?', answer: 60, unit: '°', explanation: '180 − 35 − 85 = 60°.' },
