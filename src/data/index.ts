@@ -3,6 +3,7 @@ import { GEN_FRANCAIS_PRIMAIRE } from './content/gen-francais-primaire';
 import { GEN_FRANCAIS_SECONDAIRE } from './content/gen-francais-secondaire';
 import { GEN_HG_EVEIL } from './content/gen-hg-eveil';
 import { GEN_ISLAMIQUE_PRIMAIRE } from './content/gen-islamique-primaire';
+import { GEN_ISLAMIQUE_SECONDAIRE } from './content/gen-islamique-secondaire';
 import { GEN_MATH_PRIMAIRE } from './content/gen-math-primaire';
 import { GEN_MATH_SECONDAIRE } from './content/gen-math-secondaire';
 import { EXTRA_CHAPTERS } from './content/extra';
@@ -13,7 +14,7 @@ import { EXAMS } from './exams';
 import { PROGRAMME } from './programme';
 import type { Chapter, Exam, SubjectId } from './types';
 
-export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_FRANCAIS_PRIMAIRE, ...GEN_FRANCAIS_SECONDAIRE, ...GEN_HG_EVEIL, ...GEN_ISLAMIQUE_PRIMAIRE, ...GEN_MATH_PRIMAIRE, ...GEN_MATH_SECONDAIRE];
+export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_FRANCAIS_PRIMAIRE, ...GEN_FRANCAIS_SECONDAIRE, ...GEN_HG_EVEIL, ...GEN_ISLAMIQUE_PRIMAIRE, ...GEN_ISLAMIQUE_SECONDAIRE, ...GEN_MATH_PRIMAIRE, ...GEN_MATH_SECONDAIRE];
 
 export const getChapter = (id: string) => CHAPTERS.find((c) => c.id === id);
 export const getExam = (id: string) => EXAMS.find((e) => e.id === id);
