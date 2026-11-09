@@ -1,4 +1,5 @@
 import { COLLEGE_CHAPTERS } from './content/college';
+import { EXTRA_CHAPTERS } from './content/extra';
 import { LYCEE_CHAPTERS } from './content/lycee';
 import { PRIMAIRE_CHAPTERS } from './content/primaire';
 import { CYCLE_LABEL, getLevel, LEVELS, SUBJECTS } from './curriculum';
@@ -6,7 +7,7 @@ import { EXAMS } from './exams';
 import { PROGRAMME } from './programme';
 import type { Chapter, Exam, SubjectId } from './types';
 
-export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS];
+export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS];
 
 export const getChapter = (id: string) => CHAPTERS.find((c) => c.id === id);
 export const getExam = (id: string) => EXAMS.find((e) => e.id === id);
