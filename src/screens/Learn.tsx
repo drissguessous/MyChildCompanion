@@ -39,17 +39,21 @@ export function SubjectScreen({ subjectId }: { subjectId: SubjectId }) {
   return (
     <Screen title={`${s.icon} ${subject(subjectId)}`}>
       <Muted style={{ marginBottom: 12 }}>{levelName(level)} · {t('programme Massar')}</Muted>
-      {topics.map((tp) => {
+      {topics.map((tp, i) => {
         const best = tp.chapterId ? bestGrade(mine, (a) => a.refId === tp.chapterId) : undefined;
+        const header = tp.unit && tp.unit !== topics[i - 1]?.unit;
         return (
-          <Card key={tp.title} color={s.color} onPress={tp.chapterId ? () => nav.push({ name: 'Lesson', chapterId: tp.chapterId! }) : undefined}>
+          <View key={`${i}-${tp.title}`}>
+          {header && <H style={{ fontSize: 16, marginTop: i ? 12 : 0, color: C.muted, writingDirection: isArabic(tp.unit) ? 'rtl' : 'ltr' }}>{tp.unit === 'Compléments' ? t('Compléments') : tp.unit}</H>}
+          <Card color={s.color} onPress={tp.chapterId ? () => nav.push({ name: 'Lesson', chapterId: tp.chapterId! }) : undefined}>
             <Row style={{ justifyContent: 'space-between' }}>
               <Text style={{ fontSize: 16, fontWeight: '700', color: C.ink, flex: 1, writingDirection: isArabic(tp.title) ? 'rtl' : 'ltr' }}>{tp.title}</Text>
-              {!tp.chapterId && <Badge label={t('Bientôt')} />}
+              {!tp.chapterId && <Badge label={t('En rédaction')} />}
               {tp.chapterId && best && <Badge tone={best.grade / best.scale >= 0.7 ? 'ok' : 'primary'} label={`${formatGrade(best.grade)}/${best.scale}`} />}
               {tp.chapterId && !best && <Badge tone="primary" label={read.includes(tp.chapterId) ? t('Lu') : t('Nouveau')} />}
             </Row>
           </Card>
+          </View>
         );
       })}
       {topics.length === 0 && <P>{t('Le programme de cette matière arrive bientôt.')}</P>}

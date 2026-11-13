@@ -359,4 +359,6 @@ export const AR: Record<string, string> = {
   'Lente': 'بطيئة',
   'Normale': 'عادية',
   'Rapide': 'سريعة',
+  'Compléments': 'إضافات',
+  'En rédaction': 'قيد التحرير',
 };

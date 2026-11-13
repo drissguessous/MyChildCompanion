@@ -21,7 +21,7 @@ const LYCEE: SubjectId[] = ['math', 'francais', 'arabe', 'anglais', 'svt', 'pc',
 export const LEVELS: Level[] = [
   { id: '1AP', system: 'massar', cycle: 'primaire', label: '1re année primaire', short: 'CP', gradeScale: 10, subjects: PRIMAIRE },
   { id: '2AP', system: 'massar', cycle: 'primaire', label: '2e année primaire', short: 'CE1', gradeScale: 10, subjects: PRIMAIRE },
-  { id: '3AP', system: 'massar', cycle: 'primaire', label: '3e année primaire', short: 'CE2', gradeScale: 10, subjects: PRIMAIRE_SUP },
+  { id: '3AP', system: 'massar', cycle: 'primaire', label: '3e année primaire', short: 'CE2', gradeScale: 10, subjects: PRIMAIRE },
   { id: '4AP', system: 'massar', cycle: 'primaire', label: '4e année primaire', short: 'CM1', gradeScale: 10, subjects: PRIMAIRE_SUP },
   { id: '5AP', system: 'massar', cycle: 'primaire', label: '5e année primaire', short: 'CM2', gradeScale: 10, subjects: PRIMAIRE_SUP },
   { id: '6AP', system: 'massar', cycle: 'primaire', label: '6e année primaire', short: '6AP', gradeScale: 10, subjects: PRIMAIRE_SUP, certifyingExam: 'Examen provincial (certificat d’études primaires)' },
