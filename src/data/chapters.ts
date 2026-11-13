@@ -20,6 +20,7 @@ import { GEN_O_6AP_FRANCAIS_1 } from './content/gen-o-6ap-francais-1';
 import { GEN_O_6AP_FRANCAIS_2 } from './content/gen-o-6ap-francais-2';
 import { GEN_O_6AP_HG_1 } from './content/gen-o-6ap-hg-1';
 import { GEN_O_6AP_HG_2 } from './content/gen-o-6ap-hg-2';
+import { GEN_O_6AP_ISLAMIQUE_1 } from './content/gen-o-6ap-islamique-1';
 import { GEN_O_6AP_ISLAMIQUE_2 } from './content/gen-o-6ap-islamique-2';
 import { GEN_O_6AP_MATH_1 } from './content/gen-o-6ap-math-1';
 import { GEN_SCIENCES } from './content/gen-sciences';
@@ -28,4 +29,4 @@ import { LYCEE_CHAPTERS } from './content/lycee';
 import { PRIMAIRE_CHAPTERS } from './content/primaire';
 import type { Chapter } from './types';
 
-export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_ANGLAIS_PHILO, ...GEN_ARABE, ...GEN_FRANCAIS_PRIMAIRE, ...GEN_FRANCAIS_SECONDAIRE, ...GEN_HG_EVEIL, ...GEN_ISLAMIQUE_PRIMAIRE, ...GEN_ISLAMIQUE_SECONDAIRE, ...GEN_MATH_PRIMAIRE, ...GEN_MATH_SECONDAIRE, ...GEN_O_3AC_ANGLAIS_1, ...GEN_O_3AC_ARABE_2, ...GEN_O_3AC_FRANCAIS_2, ...GEN_O_3AC_HG_2, ...GEN_O_3AC_MATH_1, ...GEN_O_3AC_PC_1, ...GEN_O_3AC_SVT_1, ...GEN_O_6AP_EVEIL_1, ...GEN_O_6AP_FRANCAIS_1, ...GEN_O_6AP_FRANCAIS_2, ...GEN_O_6AP_HG_1, ...GEN_O_6AP_HG_2, ...GEN_O_6AP_ISLAMIQUE_2, ...GEN_O_6AP_MATH_1, ...GEN_SCIENCES];
+export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_ANGLAIS_PHILO, ...GEN_ARABE, ...GEN_FRANCAIS_PRIMAIRE, ...GEN_FRANCAIS_SECONDAIRE, ...GEN_HG_EVEIL, ...GEN_ISLAMIQUE_PRIMAIRE, ...GEN_ISLAMIQUE_SECONDAIRE, ...GEN_MATH_PRIMAIRE, ...GEN_MATH_SECONDAIRE, ...GEN_O_3AC_ANGLAIS_1, ...GEN_O_3AC_ARABE_2, ...GEN_O_3AC_FRANCAIS_2, ...GEN_O_3AC_HG_2, ...GEN_O_3AC_MATH_1, ...GEN_O_3AC_PC_1, ...GEN_O_3AC_SVT_1, ...GEN_O_6AP_EVEIL_1, ...GEN_O_6AP_FRANCAIS_1, ...GEN_O_6AP_FRANCAIS_2, ...GEN_O_6AP_HG_1, ...GEN_O_6AP_HG_2, ...GEN_O_6AP_ISLAMIQUE_1, ...GEN_O_6AP_ISLAMIQUE_2, ...GEN_O_6AP_MATH_1, ...GEN_SCIENCES];
