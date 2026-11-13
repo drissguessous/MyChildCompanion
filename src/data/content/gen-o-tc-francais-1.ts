@@ -1,0 +1,138 @@
+import type { Chapter } from '../types';
+
+/** Tronc commun — Français (programme officiel), groupe 1. */
+export const GEN_O_TC_FRANCAIS_1: Chapter[] = [
+  {
+    id: 'TC-francais-o1', levelId: 'TC', subjectId: 'francais', title: 'Les genres littéraires', lang: 'fr',
+    objectives: ['Distinguer les grands genres littéraires', 'Identifier le genre d’un texte à partir de ses indices'],
+    lesson: [
+      { type: 'h', text: 'Qu’est-ce qu’un genre littéraire ?' },
+      { type: 'p', text: 'Un genre regroupe des textes qui partagent une forme et des intentions communes. On distingue traditionnellement le récit (roman, nouvelle, conte, fable), le théâtre (comédie, tragédie, drame), la poésie et la littérature d’idées (essai, discours, lettre argumentative).' },
+      { type: 'list', items: ['Récit : un narrateur raconte une histoire (personnages, lieux, temps).', 'Théâtre : un texte écrit pour être joué ; répliques, didascalies, actes et scènes.', 'Poésie : travail sur le rythme, les sonorités et les images ; souvent en vers.', 'Littérature d’idées : un auteur défend une opinion ou réfléchit sur un sujet.'] },
+      { type: 'rule', text: 'Pour reconnaître un genre, observe la présentation (vers, répliques, paragraphes), la présence d’un narrateur et la visée du texte (raconter, représenter, émouvoir, convaincre).' },
+      { type: 'example', text: 'Un texte où l’on lit « KARIM. — Tu viens au souk ? » suivi de « (Il prend son panier.) » relève du théâtre : nom du personnage + réplique + didascalie entre parenthèses.' },
+      { type: 'tip', text: 'Avant de lire un texte, regarde d’abord sa forme sur la page : elle te donne souvent le genre en quelques secondes !' },
+    ],
+    exercises: [
+      { id: 'q1', type: 'qcm', prompt: 'Les indications scéniques en italique ou entre parenthèses au théâtre s’appellent…', choices: ['des strophes', 'des didascalies', 'des chapitres'], answer: 1, explanation: 'Les didascalies indiquent les gestes, le ton, le décor : elles sont propres au théâtre.' },
+      { id: 'q2', type: 'qcm', prompt: 'Un récit court, centré sur peu de personnages et une intrigue resserrée, est…', choices: ['une nouvelle', 'une tragédie', 'un sonnet'], answer: 0, explanation: 'La nouvelle est un récit bref, avec peu de personnages et une chute souvent marquante.' },
+      { id: 'q3', type: 'tf', prompt: 'Vrai ou faux : la comédie et la tragédie appartiennent au genre théâtral.', answer: true, explanation: 'Vrai : ce sont deux sous-genres du théâtre.' },
+      { id: 'q4', type: 'text', prompt: 'Comment appelle-t-on le genre qui regroupe l’essai et le discours argumentatif ? (la littérature d’…)', accept: ['idées', 'idees', 'la littérature d’idées', "littérature d'idées", 'litterature d idees'], explanation: 'On parle de littérature d’idées (ou argumentative) : l’auteur y défend une thèse.' },
+      { id: 'q5', type: 'qcm', prompt: 'Une fable comme celles de La Fontaine se termine souvent par…', choices: ['une didascalie', 'un acte', 'une morale'], answer: 2, explanation: 'La fable est un court récit, souvent en vers, qui délivre une morale.' },
+    ],
+  },
+  {
+    id: 'TC-francais-o2', levelId: 'TC', subjectId: 'francais', title: 'Les types de textes', lang: 'fr',
+    objectives: ['Reconnaître les textes narratif, descriptif, explicatif et argumentatif', 'Repérer leurs indices linguistiques'],
+    lesson: [
+      { type: 'h', text: 'Quatre types, quatre intentions' },
+      { type: 'list', items: ['Narratif : raconter une suite d’événements (passé simple / imparfait, connecteurs temporels : d’abord, soudain, ensuite).', 'Descriptif : faire voir un lieu, un objet, une personne (imparfait, adjectifs, indicateurs de lieu : à gauche, au loin).', 'Explicatif : faire comprendre un phénomène (présent de vérité générale, vocabulaire précis, connecteurs de cause : car, parce que, donc).', 'Argumentatif : convaincre (thèse, arguments, exemples, connecteurs logiques : d’abord, de plus, cependant, en conclusion).'] },
+      { type: 'rule', text: 'Le type d’un texte se définit par sa visée principale. Un même texte peut mêler plusieurs types : on retient le type dominant.' },
+      { type: 'example', text: '« L’arganier pousse surtout dans le sud-ouest du Maroc car il résiste bien à la sécheresse. » → explicatif : présent de vérité générale et connecteur de cause « car ».' },
+      { type: 'p', text: 'Dans un récit, une pause descriptive (portrait, décor) ralentit l’action : la description est alors insérée dans la narration.' },
+      { type: 'tip', text: 'Pose-toi une seule question : « Que veut faire l’auteur ? » Raconter, montrer, expliquer ou convaincre : tu as ta réponse !' },
+    ],
+    exercises: [
+      { id: 'q1', type: 'qcm', prompt: '« Soudain, Yassine ouvrit la porte et courut vers la mer. » Ce passage est…', choices: ['descriptif', 'narratif', 'explicatif'], answer: 1, explanation: 'Succession d’actions au passé simple et connecteur « soudain » : type narratif.' },
+      { id: 'q2', type: 'qcm', prompt: 'Quel connecteur sert surtout à opposer deux arguments ?', choices: ['cependant', 'ensuite', 'à gauche'], answer: 0, explanation: '« Cependant » marque l’opposition ; « ensuite » est temporel, « à gauche » est spatial.' },
+      { id: 'q3', type: 'tf', prompt: 'Vrai ou faux : le présent de vérité générale est fréquent dans le texte explicatif.', answer: true, explanation: 'Vrai : il présente des faits toujours valables (« L’eau bout à 100 °C »).' },
+      { id: 'q4', type: 'text', prompt: 'Comment appelle-t-on l’opinion défendue dans un texte argumentatif ?', accept: ['la thèse', 'thèse', 'these', 'une thèse'], explanation: 'La thèse est l’idée que l’auteur veut faire accepter ; les arguments la soutiennent.' },
+      { id: 'q5', type: 'qcm', prompt: '« La médina de Fès s’étendait sous nos yeux : des toits blancs, des minarets verts, des ruelles étroites. » Type dominant ?', choices: ['argumentatif', 'explicatif', 'descriptif'], answer: 2, explanation: 'Imparfait, énumération d’éléments visuels et adjectifs : le texte fait voir un lieu.' },
+    ],
+  },
+  {
+    id: 'TC-francais-o3', levelId: 'TC', subjectId: 'francais', title: 'L’image, l’affiche et la bande dessinée', lang: 'fr',
+    objectives: ['Analyser une image et une affiche (texte + visuel)', 'Connaître le vocabulaire de la BD'],
+    lesson: [
+      { type: 'h', text: 'Lire une image' },
+      { type: 'p', text: 'Une image se lit comme un texte : on observe le cadrage (gros plan, plan d’ensemble), l’angle de vue (plongée, contre-plongée), les couleurs, la lumière et la composition (premier plan, arrière-plan).' },
+      { type: 'list', items: ['Affiche : un slogan, une image, parfois un logo ; elle vise à informer ou à convaincre vite.', 'BD : planche (une page), vignette ou case (une image), bulle ou phylactère (paroles), récitatif (texte du narrateur), onomatopée (bruit : « Boum ! »).', 'Plongée : on voit d’en haut, le sujet paraît petit ; contre-plongée : vu d’en bas, il paraît imposant.'] },
+      { type: 'rule', text: 'Dans une affiche, le texte et l’image se complètent : on analyse toujours ce que dit le slogan, ce que montre l’image et l’effet recherché sur le public.' },
+      { type: 'example', text: 'Une affiche de campagne pour économiser l’eau montre un robinet qui goutte au-dessus d’une terre craquelée, avec le slogan « Chaque goutte compte ». L’image dramatise, le slogan incite à agir.' },
+      { type: 'tip', text: 'Décris d’abord ce que tu vois, interprète ensuite : cette méthode en deux temps rend ton analyse claire et solide.' },
+    ],
+    exercises: [
+      { id: 'q1', type: 'qcm', prompt: 'Dans une BD, l’espace qui contient les paroles d’un personnage s’appelle…', choices: ['la planche', 'la bulle', 'le récitatif'], answer: 1, explanation: 'La bulle (ou phylactère) contient les paroles ou pensées ; le récitatif porte la voix du narrateur.' },
+      { id: 'q2', type: 'qcm', prompt: 'Un personnage filmé ou dessiné vu d’en bas paraît imposant : c’est…', choices: ['une plongée', 'un gros plan', 'une contre-plongée'], answer: 2, explanation: 'La contre-plongée grandit le sujet ; la plongée le rapetisse.' },
+      { id: 'q3', type: 'text', prompt: 'Comment appelle-t-on la phrase courte et frappante d’une affiche ?', accept: ['le slogan', 'slogan', 'un slogan'], explanation: 'Le slogan est une formule brève, facile à retenir, qui accompagne l’image.' },
+      { id: 'q4', type: 'tf', prompt: 'Vrai ou faux : « Vroum ! » écrit dans une case de BD est une onomatopée.', answer: true, explanation: 'Vrai : une onomatopée imite un bruit (ici un moteur).' },
+      { id: 'q5', type: 'qcm', prompt: 'Une page entière de bande dessinée s’appelle…', choices: ['une planche', 'une vignette', 'une bulle'], answer: 0, explanation: 'La planche est la page ; elle est composée de vignettes (cases).' },
+    ],
+  },
+  {
+    id: 'TC-francais-o4', levelId: 'TC', subjectId: 'francais', title: 'La poésie', lang: 'fr',
+    objectives: ['Compter les syllabes d’un vers et nommer les vers', 'Repérer rimes et figures de style'],
+    lesson: [
+      { type: 'h', text: 'Les outils du poème' },
+      { type: 'list', items: ['Vers : une ligne du poème ; strophe : un groupe de vers (quatrain = 4 vers, tercet = 3).', 'Mètre : octosyllabe (8 syllabes), décasyllabe (10), alexandrin (12).', 'Rimes : plates (AABB), croisées (ABAB), embrassées (ABBA).', 'Sonnet : 14 vers, deux quatrains puis deux tercets.'] },
+      { type: 'rule', text: 'En poésie, le « e » muet se prononce devant une consonne à l’intérieur du vers, mais il ne compte pas en fin de vers ni devant une voyelle (élision).' },
+      { type: 'example', text: 'Vers inventé : « La mer d’Essaouira chante sous le vent » → La / mer / d’Es / sa / oui / ra / chan / te / sous / le / vent = 11 syllabes (le « e » de « chante » compte car il est suivi d’une consonne).' },
+      { type: 'p', text: 'Le poète utilise aussi des figures de style : comparaison (avec un outil : comme, tel), métaphore (sans outil), personnification (une chose agit comme un humain), anaphore (répétition en début de vers).' },
+      { type: 'tip', text: 'Lis le vers à voix haute en tapant chaque syllabe du doigt : le compte devient un jeu de rythme !' },
+    ],
+    exercises: [
+      { id: 'q1', type: 'number', prompt: 'Combien de syllabes compte un alexandrin ?', answer: 12, unit: 'syllabes', explanation: 'L’alexandrin compte 12 syllabes, souvent coupées en deux moitiés de 6 (hémistiches).' },
+      { id: 'q2', type: 'qcm', prompt: 'Le schéma de rimes ABBA correspond à des rimes…', choices: ['plates', 'croisées', 'embrassées'], answer: 2, explanation: 'Les rimes B sont « embrassées » par les rimes A.' },
+      { id: 'q3', type: 'number', prompt: 'Combien de vers compte un sonnet ?', answer: 14, unit: 'vers', explanation: 'Deux quatrains (8 vers) + deux tercets (6 vers) = 14 vers.' },
+      { id: 'q4', type: 'qcm', prompt: '« Le vent pleure dans les palmiers. » Quelle figure de style ?', choices: ['une personnification', 'une comparaison', 'une anaphore'], answer: 0, explanation: 'Le vent « pleure » comme un être humain : c’est une personnification.' },
+      { id: 'q5', type: 'text', prompt: 'Comment appelle-t-on une strophe de quatre vers ?', accept: ['quatrain', 'un quatrain', 'le quatrain'], explanation: 'Le quatrain a 4 vers ; le tercet en a 3 ; le distique en a 2.' },
+    ],
+  },
+  {
+    id: 'TC-francais-o5', levelId: 'TC', subjectId: 'francais', title: 'La nouvelle fantastique : « La Vénus d’Ille » de Mérimée', lang: 'fr',
+    objectives: ['Définir le registre fantastique et l’hésitation', 'Situer l’œuvre et en résumer l’intrigue'],
+    lesson: [
+      { type: 'h', text: 'L’œuvre et son auteur' },
+      { type: 'p', text: 'Prosper Mérimée (1803-1870) publie « La Vénus d’Ille » en 1837. Le narrateur, un archéologue parisien, séjourne à Ille, dans le Roussillon, chez M. de Peyrehorade, qui vient de faire déterrer une statue de Vénus en bronze. Le fils, Alphonse, va se marier. Avant une partie de jeu de paume, il passe la bague destinée à sa fiancée au doigt de la statue, puis ne parvient plus à la retirer. Au matin de la nuit de noces, on le retrouve mort, comme écrasé.' },
+      { type: 'rule', text: 'Le fantastique naît de l’irruption d’un événement inexplicable dans un cadre réaliste. Il installe une hésitation entre une explication rationnelle et une explication surnaturelle, sans trancher.' },
+      { type: 'list', items: ['Cadre réaliste : lieux précis, personnages ordinaires, détails concrets.', 'Narrateur témoin, rationnel et sceptique, ce qui rend le doute plus troublant.', 'Indices inquiétants : regard méchant de la statue, accident d’un ouvrier, inscriptions latines ambiguës.', 'Fin ouverte : la statue a-t-elle tué Alphonse, ou existe-t-il une autre explication ?'] },
+      { type: 'example', text: 'Le doute est entretenu jusqu’au bout : la jeune mariée affirme avoir vu la statue entrer dans la chambre, mais le procureur penche pour une explication humaine. Le lecteur reste libre de choisir.' },
+      { type: 'tip', text: 'Note au fil de ta lecture chaque détail étrange : en fin de lecture, tu auras tous tes arguments pour analyser le fantastique.' },
+    ],
+    exercises: [
+      { id: 'q1', type: 'number', prompt: 'En quelle année « La Vénus d’Ille » a-t-elle été publiée ?', answer: 1837, explanation: 'Mérimée publie la nouvelle en 1837, en pleine période romantique.' },
+      { id: 'q2', type: 'qcm', prompt: 'Dans quelle région se situe la ville d’Ille ?', choices: ['la Bretagne', 'le Roussillon', 'l’Alsace'], answer: 1, explanation: 'Ille se trouve dans le Roussillon, près des Pyrénées, au sud de la France.' },
+      { id: 'q3', type: 'qcm', prompt: 'Qu’est-ce qui caractérise le registre fantastique ?', choices: ['Le merveilleux accepté sans surprise', 'Une explication scientifique finale', 'L’hésitation entre rationnel et surnaturel'], answer: 2, explanation: 'Le fantastique repose sur l’hésitation ; dans le merveilleux (contes), le surnaturel est accepté d’emblée.' },
+      { id: 'q4', type: 'text', prompt: 'Quel est le prénom du fils de M. de Peyrehorade, qui se marie dans la nouvelle ?', accept: ['Alphonse'], explanation: 'Alphonse de Peyrehorade passe la bague au doigt de la statue et meurt pendant sa nuit de noces.' },
+      { id: 'q5', type: 'tf', prompt: 'Vrai ou faux : le narrateur de la nouvelle est un archéologue venu de Paris.', answer: true, explanation: 'Vrai : c’est un antiquaire parisien, témoin sceptique des événements.' },
+    ],
+  },
+  {
+    id: 'TC-francais-o6', levelId: 'TC', subjectId: 'francais', title: 'La comédie : « Le Bourgeois gentilhomme » de Molière', lang: 'fr',
+    objectives: ['Connaître l’intrigue et les personnages principaux', 'Identifier les formes du comique'],
+    lesson: [
+      { type: 'h', text: 'Une comédie-ballet' },
+      { type: 'p', text: 'Molière crée « Le Bourgeois gentilhomme » en 1670 pour le roi Louis XIV, avec la musique de Lully : c’est une comédie-ballet en cinq actes, en prose. M. Jourdain, riche bourgeois, rêve de devenir gentilhomme. Il prend des maîtres (musique, danse, armes, philosophie), se laisse flatter et duper par le comte Dorante, et refuse sa fille Lucile à Cléonte, qui n’est pas noble. Covielle, le valet de Cléonte, imagine alors une mascarade : Cléonte se déguise en fils du Grand Turc et M. Jourdain est fait « mamamouchi ».' },
+      { type: 'list', items: ['Comique de mots : jeux sur le langage, faux turc (scène de la leçon de philosophie où M. Jourdain découvre qu’il parle en prose).', 'Comique de gestes : leçons d’armes et de danse, coups, révérences.', 'Comique de caractère : la vanité et la naïveté de M. Jourdain.', 'Comique de situation : la cérémonie turque, M. Jourdain trompé sans s’en apercevoir.'] },
+      { type: 'rule', text: 'La comédie classique veut « corriger les mœurs par le rire » : en se moquant d’un défaut (ici la vanité sociale), elle invite le public à réfléchir.' },
+      { type: 'example', text: 'Mme Jourdain et la servante Nicole représentent le bon sens : elles se moquent des extravagances de M. Jourdain et le spectateur rit avec elles.' },
+      { type: 'tip', text: 'Lis une scène à voix haute avec un camarade : le comique de Molière se révèle vraiment quand on le joue !' },
+    ],
+    exercises: [
+      { id: 'q1', type: 'qcm', prompt: 'Quel est le rêve de M. Jourdain ?', choices: ['Devenir gentilhomme', 'Devenir philosophe', 'Partir en Turquie'], answer: 0, explanation: 'Bourgeois enrichi, il veut imiter les manières des nobles.' },
+      { id: 'q2', type: 'number', prompt: 'En quelle année la pièce a-t-elle été créée ?', answer: 1670, explanation: 'Elle est créée en 1670 devant Louis XIV, à Chambord.' },
+      { id: 'q3', type: 'text', prompt: 'Quel titre turc inventé M. Jourdain reçoit-il lors de la cérémonie finale ?', accept: ['mamamouchi', 'le mamamouchi', 'un mamamouchi'], explanation: 'La fausse dignité de « mamamouchi » est au cœur de la mascarade organisée par Covielle.' },
+      { id: 'q4', type: 'qcm', prompt: 'La vanité de M. Jourdain, qui fait rire, relève du comique…', choices: ['de gestes', 'de caractère', 'de mots'], answer: 1, explanation: 'Un trait de personnalité exagéré relève du comique de caractère.' },
+      { id: 'q5', type: 'tf', prompt: 'Vrai ou faux : Cléonte se déguise en fils du Grand Turc pour épouser Lucile.', answer: true, explanation: 'Vrai : grâce à ce déguisement, M. Jourdain accepte le mariage.' },
+    ],
+  },
+  {
+    id: 'TC-francais-o7', levelId: 'TC', subjectId: 'francais', title: 'Activités de langue : discours rapporté et connecteurs', lang: 'fr',
+    objectives: ['Passer du discours direct au discours indirect', 'Employer correctement les connecteurs logiques'],
+    lesson: [
+      { type: 'h', text: 'Rapporter des paroles' },
+      { type: 'p', text: 'Au discours direct, on cite les paroles telles quelles, avec guillemets et tirets. Au discours indirect, on les intègre dans une proposition subordonnée introduite par un verbe de parole (dire, affirmer, demander).' },
+      { type: 'rule', text: 'Passage au discours indirect après un verbe au passé : présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel présent ; les pronoms et indicateurs changent (je → il, demain → le lendemain, ici → là).' },
+      { type: 'example', text: 'Direct : Salma a dit : « Je partirai demain à Rabat. » → Indirect : Salma a dit qu’elle partirait le lendemain à Rabat.' },
+      { type: 'list', items: ['Cause : car, parce que, puisque.', 'Conséquence : donc, c’est pourquoi, si bien que.', 'Opposition : mais, cependant, pourtant, alors que.', 'Addition : de plus, en outre, ensuite.'] },
+      { type: 'tip', text: 'Pour transformer une phrase, change les éléments un par un (verbe, pronom, temps) : tu avanceras sans te tromper.' },
+    ],
+    exercises: [
+      { id: 'q1', type: 'qcm', prompt: 'Il a dit : « Je viendrai. » → Il a dit qu’il…', choices: ['viendra', 'venait', 'viendrait'], answer: 2, explanation: 'Après un verbe introducteur au passé, le futur devient conditionnel présent : « viendrait ».' },
+      { id: 'q2', type: 'qcm', prompt: 'Quel connecteur exprime la conséquence ?', choices: ['pourtant', 'donc', 'puisque'], answer: 1, explanation: '« Donc » introduit une conséquence ; « pourtant » oppose, « puisque » donne une cause.' },
+      { id: 'q3', type: 'text', prompt: 'Au discours indirect au passé, par quoi remplace-t-on « demain » ?', accept: ['le lendemain', 'lendemain'], explanation: '« Demain » devient « le lendemain » car le repère n’est plus le moment où l’on parle.' },
+      { id: 'q4', type: 'tf', prompt: 'Vrai ou faux : le discours indirect garde les guillemets.', answer: false, explanation: 'Faux : les guillemets disparaissent, les paroles sont intégrées dans une subordonnée.' },
+      { id: 'q5', type: 'qcm', prompt: 'Elle a affirmé : « J’ai fini mon devoir. » → Elle a affirmé qu’elle…', choices: ['avait fini son devoir', 'a fini mon devoir', 'finirait son devoir'], answer: 0, explanation: 'Le passé composé devient plus-que-parfait et « mon » devient « son ».' },
+    ],
+  },
+];
