@@ -1,7 +1,6 @@
 /**
  * Base de simulation : trois enfants fictifs avec un historique réaliste
  * (notes, humeurs, étoiles), pour les démos et les tests du front-end.
- * Mot de passe parent de la démo : 1234 — code de secours : DEMO-2026.
  */
 import { getLevel } from './curriculum';
 import { EXAMS } from './exams';
@@ -12,8 +11,6 @@ import { bilanRef, resolveActivity } from '../lib/activities';
 import { buildPlan, masteryFromBilan, type Plan } from '../lib/plan';
 import type { AppState, Attempt, Child, MoodEntry } from '../store/types';
 
-export const DEMO_PASSWORD = '1234';
-export const DEMO_RECOVERY = 'DEMO-2026';
 
 const DAY = 86_400_000;
 const isoDay = (offset: number) => new Date(Date.now() - offset * DAY).toISOString().slice(0, 10);

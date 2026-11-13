@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { Text, View } from "react-native";
 import { useI18n } from '../i18n';
 import { useApp } from '../store/AppContext';
 import { Btn, Card, Field, H, Muted, P } from './kit';
@@ -7,7 +7,7 @@ import { C } from './theme';
 
 /** Affiche `children` seulement si le parent a saisi son mot de passe (session de 10 min). */
 export function ParentGate({ children, reason }: { children: React.ReactNode; reason?: string }) {
-  const { parentUnlocked, unlockParent, recoverParent, state } = useApp();
+  const { parentUnlocked, unlockParent, recoverParent, setupParent, state } = useApp();
   const { t } = useI18n();
   const [pwd, setPwd] = useState('');
   const [err, setErr] = useState('');
@@ -15,8 +15,42 @@ export function ParentGate({ children, reason }: { children: React.ReactNode; re
   const [recover, setRecover] = useState(false);
   const [code, setCode] = useState('');
   const [newPwd, setNewPwd] = useState('');
+  const [pwd2, setPwd2] = useState('');
+  const [newCode, setNewCode] = useState<string>();
 
+  if (newCode) {
+    return (
+      <Card style={{ borderColor: C.primary, borderWidth: 2 }}>
+        <H>📝 {t('Notez ce code')}</H>
+        <P>{t('Il permet de changer le mot de passe parent si vous l’oubliez. Gardez-le hors de portée des enfants.')}</P>
+        <Text selectable style={{ fontSize: 28, fontWeight: "900", textAlign: "center", letterSpacing: 3, color: C.primary, marginVertical: 12 }}>{newCode}</Text>
+        <Btn label={t('C’est noté')} onPress={() => setNewCode(undefined)} />
+      </Card>
+    );
+  }
   if (parentUnlocked) return <>{children}</>;
+
+  if (!state.parent) {
+    const create = async () => {
+      if (pwd.length < 4) return setErr(t('Choisissez au moins 4 caractères.'));
+      if (pwd !== pwd2) return setErr(t('Les deux mots de passe ne sont pas identiques.'));
+      setErr('');
+      setBusy(true);
+      const c = await setupParent(pwd);
+      setBusy(false);
+      setPwd(''); setPwd2('');
+      setNewCode(c);
+    };
+    return (
+      <Card style={{ borderColor: C.primary, borderWidth: 2 }}>
+        <H>🔒 {t('Créez votre mot de passe parent')}</H>
+        <Field label={t('Mot de passe parent')} value={pwd} onChangeText={setPwd} secureTextEntry autoFocus />
+        <Field label={t('Confirmer le mot de passe')} value={pwd2} onChangeText={setPwd2} secureTextEntry onSubmitEditing={create} returnKeyType="done" />
+        {!!err && <Muted style={{ color: C.review, marginBottom: 8 }}>{err}</Muted>}
+        <Btn label={t('Créer')} onPress={create} loading={busy} disabled={!pwd || !pwd2} />
+      </Card>
+    );
+  }
 
   async function submit() {
     setBusy(true);
@@ -40,7 +74,6 @@ export function ParentGate({ children, reason }: { children: React.ReactNode; re
     <Card style={{ borderColor: C.primary, borderWidth: 2 }}>
       <H>🔒 {t('Espace parent')}</H>
       <P style={{ marginBottom: 12 }}>{reason ?? t('Cette partie est réservée aux parents.')}</P>
-      {state.demo && <Muted style={{ marginBottom: 10 }}>{t('Mode démo : le mot de passe est 1234.')}</Muted>}
       {!recover ? (
         <>
           <Field label={t('Mot de passe parent')} value={pwd} onChangeText={setPwd} secureTextEntry autoFocus onSubmitEditing={submit} returnKeyType="done" />

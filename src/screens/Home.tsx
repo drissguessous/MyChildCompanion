@@ -42,7 +42,6 @@ export function Profiles() {
       <Btn kind="soft" icon="➕" label={t('Ajouter un enfant')} onPress={() => nav.push({ name: 'ChildEditor' })} />
       <View style={{ height: 10 }} />
       <Btn kind="ghost" icon="🔒" label={t('Espace parent')} onPress={() => nav.push({ name: 'ParentHome' })} />
-      {state.demo && <Muted style={{ textAlign: 'center', marginTop: 16 }}>{t('Mode démo — mot de passe parent : 1234')}</Muted>}
     </Screen>
   );
 }

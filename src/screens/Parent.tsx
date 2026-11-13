@@ -60,6 +60,7 @@ function ParentHomeBody() {
                 <Muted>{level(getLevel(c.levelId))}</Muted>
               </View>
               {avg !== undefined && <Badge tone="primary" label={`${t('Moy. récente')} ${formatGrade(Math.round(avg * scale * 4) / 4)}/${scale}`} />}
+              <Btn small kind="ghost" icon="✏️" label={t('Modifier')} onPress={() => nav.push({ name: 'ChildEditor', childId: c.id })} />
             </Row>
             <Row gap={8} style={{ marginTop: 10 }}>
               {pending > 0 && <Badge tone="sun" label={`✍️ ${t('{n} copie(s) à noter', { n: pending })}`} />}

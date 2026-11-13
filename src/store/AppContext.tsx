@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
-import { buildDemoState, DEMO_PASSWORD, DEMO_RECOVERY } from '../data/simulation';
+import { buildDemoState } from '../data/simulation';
 import { hashSecret, newRecoveryCode, normalizeRecovery, randomHex } from '../lib/security';
 import type { Lang } from '../coach/messages';
 import { completeInPlan, type Plan, type TaskKind } from '../lib/plan';
@@ -113,13 +113,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [state.parent]);
 
   const loadDemo = useCallback(async () => {
-    const salt = randomHex();
-    const recoverySalt = randomHex();
-    const [hash, recoveryHash] = await Promise.all([
-      hashSecret(DEMO_PASSWORD, salt),
-      hashSecret(normalizeRecovery(DEMO_RECOVERY), recoverySalt),
-    ]);
-    setState((prev) => ({ ...buildDemoState({ salt, hash, recoverySalt, recoveryHash }), lang: prev.lang }));
+    // Pas de mot de passe imposé : le parent crée le sien au premier accès à l'espace parent.
+    setState((prev) => ({ ...buildDemoState(undefined), lang: prev.lang }));
     setUnlockedUntil(0);
   }, []);
 
