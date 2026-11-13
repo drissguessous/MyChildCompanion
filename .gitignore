@@ -40,3 +40,5 @@ yarn-error.*
 /ios
 /android
 /android
+# brouillons de rédaction (ajoutés explicitement une fois validés)
+src/data/content/gen-o-*.ts

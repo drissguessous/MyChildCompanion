@@ -14,6 +14,8 @@ export interface QuestionOutcome {
 export function parseNumber(v: string): number | undefined {
   const cleaned = v.replace(/\s/g, '').replace(',', '.').replace('−', '-');
   if (cleaned === '' || cleaned === '-' ) return undefined;
+  const frac = cleaned.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/);
+  if (frac && Number(frac[2]) !== 0) return Number(frac[1]) / Number(frac[2]);
   const n = Number(cleaned);
   return Number.isFinite(n) ? n : undefined;
 }

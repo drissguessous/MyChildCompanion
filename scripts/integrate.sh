@@ -14,7 +14,7 @@ errs=$(npx tsc --noEmit 2>&1 | grep "error TS" | grep -v "src/data/content/gen-"
 for g in "${ok[@]}"; do errs+=$(npx tsc --noEmit 2>&1 | grep "gen-$g.ts" || true); done
 [ -n "$errs" ] && { echo "$errs"; exit 1; }
 (npm run -s check:tone && npm run -s check:i18n && npm run -s check:content) 2>&1 | grep -E "✓|✗|Arabe"
-git add scripts src/data/chapters.ts src/data/content/links.ts $(printf "src/data/content/gen-%s.ts " "${ok[@]}")
+git add -f scripts src/data/chapters.ts src/data/content/links.ts $(printf "src/data/content/gen-%s.ts " "${ok[@]}")
 git commit -q -m "Contenu officiel : ${ok[*]}
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

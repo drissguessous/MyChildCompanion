@@ -44,7 +44,7 @@ export const GEN_O_3AC_MATH_1: Chapter[] = [
       { id: 'q2', type: 'qcm', prompt: '√72 est égal à :', choices: ['6√2', '8√3', '4√3'], answer: 0, explanation: '72 = 36 × 2, donc √72 = √36 × √2 = 6√2. (4√3 = √48 et 8√3 = √192.)' },
       { id: 'q3', type: 'tf', prompt: '√(16 + 9) = √16 + √9.', answer: false, explanation: '√25 = 5 alors que √16 + √9 = 4 + 3 = 7.' },
       { id: 'q4', type: 'number', prompt: 'Calcule (√7)² + √(3²).', answer: 10, explanation: '(√7)² = 7 et √(3²) = 3, donc 7 + 3 = 10.' },
-      { id: 'q5', type: 'text', prompt: 'Écris 10/√5 sans racine au dénominateur, sous la forme a√5.', accept: ['2√5', '2 √5', '2racine5', '2 racine de 5', '2racine(5)'], explanation: '10/√5 = 10√5/5 = 2√5.' },
+      { id: 'q5', type: 'qcm', prompt: 'Écris 10/√5 sans racine au dénominateur.', choices: ['5√2', '2√5', '√50'], answer: 1, explanation: '10/√5 = 10√5/5 = 2√5.' },
     ],
   },
   {
