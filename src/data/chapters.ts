@@ -8,10 +8,11 @@ import { GEN_ISLAMIQUE_PRIMAIRE } from './content/gen-islamique-primaire';
 import { GEN_ISLAMIQUE_SECONDAIRE } from './content/gen-islamique-secondaire';
 import { GEN_MATH_PRIMAIRE } from './content/gen-math-primaire';
 import { GEN_MATH_SECONDAIRE } from './content/gen-math-secondaire';
+import { GEN_O_3AC_ANGLAIS_1 } from './content/gen-o-3ac-anglais-1';
 import { GEN_SCIENCES } from './content/gen-sciences';
 import { EXTRA_CHAPTERS } from './content/extra';
 import { LYCEE_CHAPTERS } from './content/lycee';
 import { PRIMAIRE_CHAPTERS } from './content/primaire';
 import type { Chapter } from './types';
 
-export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_ANGLAIS_PHILO, ...GEN_ARABE, ...GEN_FRANCAIS_PRIMAIRE, ...GEN_FRANCAIS_SECONDAIRE, ...GEN_HG_EVEIL, ...GEN_ISLAMIQUE_PRIMAIRE, ...GEN_ISLAMIQUE_SECONDAIRE, ...GEN_MATH_PRIMAIRE, ...GEN_MATH_SECONDAIRE, ...GEN_SCIENCES];
+export const CHAPTERS: Chapter[] = [...PRIMAIRE_CHAPTERS, ...COLLEGE_CHAPTERS, ...LYCEE_CHAPTERS, ...EXTRA_CHAPTERS, ...GEN_ANGLAIS_PHILO, ...GEN_ARABE, ...GEN_FRANCAIS_PRIMAIRE, ...GEN_FRANCAIS_SECONDAIRE, ...GEN_HG_EVEIL, ...GEN_ISLAMIQUE_PRIMAIRE, ...GEN_ISLAMIQUE_SECONDAIRE, ...GEN_MATH_PRIMAIRE, ...GEN_MATH_SECONDAIRE, ...GEN_O_3AC_ANGLAIS_1, ...GEN_SCIENCES];
