@@ -4,7 +4,7 @@ import { buildDemoState } from '../data/simulation';
 import { hashSecret, newRecoveryCode, normalizeRecovery, randomHex } from '../lib/security';
 import type { Lang } from '../coach/messages';
 import { completeInPlan, type Plan, type TaskKind } from '../lib/plan';
-import { EMPTY_STATE, type AppState, type Attempt, type Child, type MoodEntry } from './types';
+import { EMPTY_STATE, type AppState, type Attempt, type Child, type MoodEntry, type Draft } from './types';
 
 const KEY = 'oustadati:v1';
 const PARENT_SESSION_MS = 10 * 60 * 1000;
@@ -33,6 +33,7 @@ interface Ctx {
   addStars: (childId: string, n: number) => void;
   markActive: (childId: string) => void;
   markLessonRead: (childId: string, chapterId: string) => void;
+  saveDraft: (childId: string, key: string, d: Draft | undefined) => void;
   setLang: (l: Lang) => void;
   savePlan: (p: Plan) => void;
   completeTask: (childId: string, kind: TaskKind, ref: string) => void;
@@ -159,6 +160,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       const days = s.activeDays[childId] ?? [];
       if (days.includes(today())) return s;
       return { ...s, activeDays: { ...s.activeDays, [childId]: [...days, today()] } };
+    }),
+    saveDraft: (childId, key, d) => setState((s) => {
+      const mine = { ...(s.drafts?.[childId] ?? {}) };
+      if (d) mine[key] = d; else delete mine[key];
+      return { ...s, drafts: { ...(s.drafts ?? {}), [childId]: mine } };
     }),
     markLessonRead: (childId, chapterId) => setState((s) => {
       const list = s.readLessons[childId] ?? [];

@@ -33,7 +33,7 @@ function Router() {
     case 'Home': return <Home />;
     case 'Subject': return <SubjectScreen subjectId={route.subjectId} />;
     case 'Lesson': return <Lesson key={route.chapterId} chapterId={route.chapterId} />;
-    case 'Quiz': return <Quiz key={`${route.mode}-${route.refId}`} mode={route.mode} refId={route.refId} />;
+    case 'Quiz': return <Quiz key={`${route.mode}-${route.refId}`} mode={route.mode} refId={route.refId} resume={route.resume} />;
     case 'Result': return <Result attemptId={route.attemptId} />;
     case 'Correction': return <Correction attemptId={route.attemptId} />;
     case 'Exams': return <Exams />;

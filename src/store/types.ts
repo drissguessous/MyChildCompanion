@@ -57,6 +57,13 @@ export interface ParentAuth {
   recoveryHash: string;
 }
 
+export interface Draft {
+  refId: string; // pour bilan/entraînement, contient la graine des questions
+  answers: Answers;
+  elapsedSec: number; // temps déjà passé, le chrono reprend là où il était
+  savedAt: string;
+}
+
 export interface AppState {
   version: 1;
   parent?: ParentAuth;
@@ -66,6 +73,7 @@ export interface AppState {
   stars: Record<string, number>; // childId → étoiles d'effort
   activeDays: Record<string, string[]>; // childId → dates actives
   readLessons: Record<string, string[]>; // childId → chapterIds lus
+  drafts?: Record<string, Record<string, Draft>>; // childId → « mode:refId » → travail en cours
   activeChildId?: string;
   demo: boolean;
   lang: Lang;

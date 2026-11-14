@@ -151,8 +151,10 @@ function chunks(text: string, max: number): string[] {
 }
 
 /** Lit une suite de segments ; chaque segment peut avoir sa propre langue. */
+let gen = 0;
 export function speak(id: string, segments: { text: string; lang?: VoiceLang }[], rate = prefs.rate, forceVoice?: string) {
   Speech.stop();
+  const my = ++gen; // les rappels d'une lecture annulée (stop asynchrone) sont ignorés
   void loadVoices();
   current = id;
   emit();
@@ -163,7 +165,7 @@ export function speak(id: string, segments: { text: string; lang?: VoiceLang }[]
     return chunks(clean, Math.min(Speech.maxSpeechInputLength || 3000, 1500)).map((t) => ({ t, lang }));
   });
   const next = (i: number) => {
-    if (current !== id) return;
+    if (current !== id || gen !== my) return;
     if (i >= queue.length) { current = null; emit(); return; }
     const lang = queue[i].lang;
     // Pas de voix pour cette langue sur l'appareil : on saute plutôt que de mal prononcer
@@ -173,12 +175,13 @@ export function speak(id: string, segments: { text: string; lang?: VoiceLang }[]
       language: LOCALE[lang],
       ...(voice ? { voice } : {}),
       rate: queue[i].lang === 'ar' ? rate * 0.95 : rate,
-      onDone: () => next(i + 1),
-      onStopped: () => { if (current === id) { current = null; emit(); } },
-      onError: () => next(i + 1),
+      onDone: () => { if (gen === my) next(i + 1); },
+      onStopped: () => { if (gen === my && current === id) { current = null; emit(); } },
+      onError: () => { if (gen === my) next(i + 1); },
     });
   };
-  next(0);
+  // Laisser le stop se terminer : sinon la 1re phrase (l'énoncé) est coupée et seules les options sont lues
+  setTimeout(() => next(0), 250);
 }
 
 export function stopSpeaking() {

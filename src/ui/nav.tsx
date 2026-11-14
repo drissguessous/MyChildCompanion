@@ -12,7 +12,7 @@ export type Route =
   | { name: 'Home' }
   | { name: 'Subject'; subjectId: SubjectId }
   | { name: 'Lesson'; chapterId: string }
-  | { name: 'Quiz'; mode: ActivityKind; refId: string }
+  | { name: 'Quiz'; mode: ActivityKind; refId: string; resume?: boolean }
   | { name: 'Result'; attemptId: string }
   | { name: 'Correction'; attemptId: string }
   | { name: 'Exams' }

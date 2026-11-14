@@ -24,7 +24,7 @@ function QuestionCard({ q, n, value, onChange, outcome, locked, rtl, act }: {
   const { t } = useI18n();
   const [showHint, setShowHint] = useState(false);
   const vlang: VoiceLang = act.lang === 'ar' ? 'ar' : act.lang === 'en' ? 'en' : 'fr';
-  const readSegments = [{ text: q.prompt, lang: vlang }, ...(q.type === 'qcm' ? q.choices.map((c, i) => ({ text: `${'ABCD'[i]}. ${c}`, lang: vlang })) : [])];
+  const readSegments = [{ text: q.prompt, lang: vlang }, ...(q.type === 'qcm' ? q.choices.map((c, i) => ({ text: `${'ABCD'[i]}. ${c}`, lang: vlang })) : q.type === 'tf' ? [{ text: vlang === 'ar' ? 'صحيح أم خطأ؟' : vlang === 'en' ? 'True or false?' : 'Vrai ou faux ?', lang: vlang }] : [])];
   const hint = showHint ? hintFor(q, act) : undefined;
   function onVoice(text: string) {
     if (q.type === 'qcm') { const i = matchChoice(text, q.choices); if (i !== undefined) onChange(i); return; }
@@ -114,15 +114,32 @@ function planKey(kind: ActivityKind, refId: string): [ 'exercice' | 'examen' | '
   return [kind, refId];
 }
 
-export function Quiz({ mode, refId }: { mode: ActivityKind; refId: string }) {
+export function Quiz({ mode, refId, resume }: { mode: ActivityKind; refId: string; resume?: boolean }) {
   const nav = useNav();
   const { t, lang } = useI18n();
-  const { child, addAttempt, addStars, completeTask } = useApp();
+  const { child, state, addAttempt, addStars, completeTask, saveDraft } = useApp();
   const act = useMemo(() => resolveActivity(mode, refId), [mode, refId]);
-  const [answers, setAnswers] = useState<Answers>({});
-  const [phase, setPhase] = useState<'intro' | 'answer' | 'checked' | 'retry'>(mode === 'examen' || mode === 'bilan' ? 'intro' : 'answer');
+  // bilan et entraînement ont une graine aléatoire : la clé ignore la graine, le brouillon garde le refId exact
+  const stable = mode === 'bilan' || mode === 'entrainement' ? refId.split(':').filter((_, i, a) => !(mode === 'bilan' ? i === 2 : i === a.length - 2)).join(':') : refId;
+  const draftKey = `${mode}:${stable}`;
+  const [draft] = useState(() => (child ? state.drafts?.[child.id]?.[draftKey] : undefined));
+  const sameRef = draft?.refId === refId;
+  useEffect(() => {
+    if (draft && !sameRef && mode === 'entrainement') nav.replace({ name: 'Quiz', mode, refId: draft.refId, resume: true });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const autoResume = !!draft && sameRef && (resume || (mode !== 'examen' && mode !== 'bilan'));
+  const [answers, setAnswersRaw] = useState<Answers>(() => (autoResume ? draft!.answers : {}));
+  const [phase, setPhase] = useState<'intro' | 'answer' | 'checked' | 'retry'>((mode === 'examen' || mode === 'bilan') && !autoResume ? 'intro' : 'answer');
   const [checked, setChecked] = useState<QuestionOutcome[]>();
-  const [startedAt, setStartedAt] = useState(Date.now());
+  const [startedAt, setStartedAt] = useState(() => Date.now() - (autoResume ? draft!.elapsedSec * 1000 : 0));
+  // Enregistrement automatique à chaque réponse : l'enfant peut quitter et reprendre sans rien perdre
+  function setAnswers(u: Answers | ((a: Answers) => Answers)) {
+    setAnswersRaw((prev) => {
+      const next = typeof u === 'function' ? u(prev) : u;
+      if (child) saveDraft(child.id, draftKey, Object.keys(next).length ? { refId, answers: next, elapsedSec: Math.round((Date.now() - startedAt) / 1000), savedAt: new Date().toISOString() } : undefined);
+      return next;
+    });
+  }
   const [printing, setPrinting] = useState(false);
   if (!child || !act) return null;
 
@@ -145,6 +162,7 @@ export function Quiz({ mode, refId }: { mode: ActivityKind; refId: string }) {
       durationSec: Math.round((Date.now() - startedAt) / 1000),
     };
     addAttempt(attempt);
+    saveDraft(child!.id, draftKey, undefined);
     addStars(child!.id, 1 + (retried ? 1 : 0) + (singleShot ? 1 : 0));
     const [k, ref] = planKey(mode, refId);
     completeTask(child!.id, k, ref);
@@ -175,7 +193,19 @@ export function Quiz({ mode, refId }: { mode: ActivityKind; refId: string }) {
           {mode === 'examen' && <P>{child.chronoEnabled ? `⏱ ${t('Le chronomètre est activé (réglage parent).')}` : `🙂 ${t('Pas de chronomètre : prends ton temps.')}`}</P>}
           {exam && <Muted style={{ marginTop: 8 }}>{exam.instructions}</Muted>}
         </Card>
-        <Btn icon="🚀" label={t('Je commence')} onPress={() => { setStartedAt(Date.now()); setPhase('answer'); }} />
+        {draft ? (
+          <>
+            <Card color={C.ok}><P>💾 {t('Tu avais commencé : {a} réponse(s) enregistrée(s). Tu peux reprendre là où tu t’étais arrêté.', { a: Object.keys(draft.answers).length })}</P></Card>
+            <Btn icon="▶️" label={t('Reprendre')} onPress={() => {
+              if (!sameRef) { nav.replace({ name: 'Quiz', mode, refId: draft.refId, resume: true }); return; }
+              setAnswersRaw(draft.answers); setStartedAt(Date.now() - draft.elapsedSec * 1000); setPhase('answer');
+            }} />
+            <View style={{ height: 8 }} />
+            <Btn kind="ghost" small label={t('Recommencer depuis le début')} onPress={() => { saveDraft(child.id, draftKey, undefined); setStartedAt(Date.now()); setPhase('answer'); }} />
+          </>
+        ) : (
+          <Btn icon="🚀" label={t('Je commence')} onPress={() => { setStartedAt(Date.now()); setPhase('answer'); }} />
+        )}
         <View style={{ height: 10 }} />
         <Row gap={10}>
           <Btn small kind="soft" icon="🌬️" label={t('Respirer d’abord')} onPress={() => nav.push({ name: 'Breathing' })} />
@@ -201,12 +231,16 @@ export function Quiz({ mode, refId }: { mode: ActivityKind; refId: string }) {
             <Btn style={{ flexGrow: 1 }} kind="soft" label={t('Terminer')} onPress={() => finish(answers, false)} />
           </Row>
         ) : (
-          <Btn
-            icon="✅"
-            label={singleShot ? t('Rendre ma copie ({a}/{b})', { a: answeredCount, b: questions.length }) : t('Vérifier mes réponses')}
-            onPress={verify}
-            disabled={answeredCount === 0}
-          />
+          <Row gap={10}>
+            {phase === 'answer' && answeredCount > 0 && <Btn kind="soft" icon="💾" label={t('Enregistrer et continuer plus tard')} onPress={() => nav.back()} />}
+            <Btn
+              style={{ flexGrow: 1 }}
+              icon="✅"
+              label={singleShot ? t('Rendre ma copie ({a}/{b})', { a: answeredCount, b: questions.length }) : t('Vérifier mes réponses')}
+              onPress={verify}
+              disabled={answeredCount === 0}
+            />
+          </Row>
         )
       }
     >
