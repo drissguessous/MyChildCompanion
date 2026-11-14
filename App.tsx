@@ -82,7 +82,7 @@ function Root() {
       </View>
     );
   }
-  const initial: Route = !state.parent ? { name: 'Welcome' } : state.children.length === 0 ? { name: 'ChildEditor', onboarding: true } : { name: 'Profiles' };
+  const initial: Route = state.children.length > 0 ? { name: 'Profiles' } : !state.parent ? { name: 'Welcome' } : { name: 'ChildEditor', onboarding: true };
   return (
     <NavProvider initial={initial}>
       <Router />
